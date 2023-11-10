@@ -17,24 +17,27 @@
 	a {
 		@apply text-santa-grey dark:text-ocean hover:text-ocean;
 	}
+
+	:root {
+		@apply bg-ocean dark:bg-black;		
+	}
 }
 
 @tailwind utilities;
 
 @layer utilities {
 	dark:hover.brightness-50 {
-			filter: brightness(0.5);
-		}
+		filter: brightness(0.5);
+	}
 
-		dark:hover.brightness-100 {
-			filter: brightness(1);
-		}
-	
+	dark:hover.brightness-100 {
+		filter: brightness(1);
+	}
 }
 
 @tailwind components;
-@layer components { 
+@layer components {
 	.shadow-award {
 		@apply shadow-2xl-tulip-tree dark:shadow-2xl-ocean;
-	}	
+	}
 }
