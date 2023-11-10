@@ -3,7 +3,6 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import favicons from "astro-favicons";
-import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,6 +21,5 @@ export default defineConfig({
     theme_color: "#077da0",
     faviconsDarkMode: true
   })],
-  output: "server",
-  adapter: vercel()
+  
 });  
