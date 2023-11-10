@@ -16,14 +16,14 @@ const { experience } = Astro.props;
 				<a href={experience.url} target="_blank" rel="noopener" title={experience.title} class="flex justify-center w-full h-full">
 					<picture>
 						<source type="image/webp" srcset={experience.logo.webp} />
-						<img alt={experience.logo.alt} src={experience.logo.url} style={"backgroundColor:" + experience.logo.background} 
+						<img alt={"screenshot of " + experience.logo.alt} src={experience.logo.url} style={"backgroundColor:" + experience.logo.background} 
                         class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel" width="100" height="100" loading="lazy" title={experience.logo.alt} />
 					</picture>
 				</a>
 			:
 				<picture>
 					<source type="image/webp" srcset={experience.logo.webp} />
-					<img alt={experience.logo.alt} src={experience.logo.url} style={"backgroundColor:" + experience.logo.background}
+					<img alt={"screenshot of " + experience.logo.alt} src={experience.logo.url} style={"backgroundColor:" + experience.logo.background}
                      class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel" width="100" height="100" loading="lazy" title={experience.logo.alt} />
 				</picture>
         }
