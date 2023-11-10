@@ -30,8 +30,10 @@ import "../styles/main.css";
 		<meta name="twitter:image:src" content="https://en.gravatar.com/userimage/11972664/1f60f14a9a99398eefe01621f2c73860.png?size=400" />
 
 		<link rel="publisher" href="https://garpunkal.dev" />
-		<link rel="canonical" href="https://garpunkal.dev" /><link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="me" href="https://mastodon.social/@garpunkal" />
+		<link rel="canonical" href="https://garpunkal.dev" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="me" href="https://mastodon.social/@garpunkal" />
 
 		<script src="https://www.googletagmanager.com/gtag/js?id=G-3TJPB46KB1" async></script>
 		<noscript>
@@ -44,11 +46,11 @@ import "../styles/main.css";
 
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<body class="bg-ocean dark:bg-black">
-			<slot />
-		</body>
 	</head>
-
+	
+	<body class="bg-ocean dark:bg-black">
+		<slot />
+	</body>
 	<script is:inline>
 		document.getElementById("switchTheme").addEventListener("click", function () {
 			let htmlClasses = document.querySelector("html").classList;
