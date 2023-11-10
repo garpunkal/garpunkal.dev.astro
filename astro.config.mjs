@@ -8,6 +8,7 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://garpunkal.dev',
+  prefetch: true,
   integrations: [tailwind(), sitemap(), robotsTxt({
     sitemap: ['https://garpunkal.dev/sitemap-index.xml']
   }), favicons({
