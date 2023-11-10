@@ -20,6 +20,5 @@ export default defineConfig({
     background: "#077da0",
     theme_color: "#077da0",
     faviconsDarkMode: true
-  })],
-  
+  })]  
 });  
