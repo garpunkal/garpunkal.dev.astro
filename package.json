@@ -4,20 +4,20 @@
   "version": "1.0.0",
   "private": false,
   "homepage": "https://garpunkal.dev",
-	"description": "Personal website for Gareth Wright",
-	"keywords": [
-		"typescript",
-		"astro",
-		"tailwindcss",
-		"csharp",
-		"tailwind",
+  "description": "Personal website for Gareth Wright",
+  "keywords": [
+    "typescript",
+    "astro",
+    "tailwindcss",
+    "csharp",
+    "tailwind",
     "squidex"
-	],
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/garpunkal/garpunkal.dev.astro"
-	},
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garpunkal/garpunkal.dev.astro"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
