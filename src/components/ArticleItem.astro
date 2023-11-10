@@ -1,5 +1,6 @@
 ---
 import { Article } from "../scripts/models/article";
+import Tag from "./Tag.astro";
 interface Props {
 	article: Article;
 	cssClass: string;
@@ -26,15 +27,8 @@ const { article, cssClass } = Astro.props;
 			<p class="mb-3 leading-relaxed text-iron dark:text-santa-grey">
 				{article.description}
 			</p>
-
 			{
-				article.tag_list.map((tag) => {
-					<div class="inline-flex items-center px-4 py-2 my-1 mr-1 text-xs font-medium text-mercury rounded bg-ocean dark:bg-ocean dark:text-mercury">
-						<a href={"https://dev.to/t/" + tag} target="_blank" rel="noopener" title={tag} class="text-white dark:text-iron hover:text-mirage dark:hover:text-white">
-							{tag}
-						</a>
-					</div>;
-				})
+				article.tag_list.map((tag:string) => <Tag tag={tag}/>)
 			}
 		</div>
 	</div>
