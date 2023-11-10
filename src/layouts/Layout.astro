@@ -51,7 +51,7 @@ import "../styles/main.css";
 	<body>
 		<slot />
 	</body>
-	<script is:inline>
+	<script>
 		document.getElementById("switchTheme").addEventListener("click", function () {
 			let htmlClasses = document.querySelector("html").classList;
 			if (localStorage.theme == "dark") {
