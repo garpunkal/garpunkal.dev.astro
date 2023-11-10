@@ -15,7 +15,7 @@ const articles = await GetArticles();
 ---
 
 <Layout>
-	<main >
+	<main>
 		<Header home={home} />
 		<Projects home={home} projects={projects} />
 		<Articles home={home} articles={articles} />
@@ -24,19 +24,19 @@ const articles = await GetArticles();
 	</main>
 </Layout>
 
-<script>	
-    document.querySelectorAll('a[href^="#projects"]').forEach((anchor) => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth",
-            });
-        });
-    });
-    document.querySelectorAll('a[href^="#top"]').forEach((anchor) => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-        });
-    });
+<script>
+	document.querySelectorAll('a[href^="#projects"]').forEach((anchor) => {
+		anchor.addEventListener("click", function (e) {
+			e.preventDefault();
+			document.querySelector(this.getAttribute("href")).scrollIntoView({
+				behavior: "smooth",
+			});
+		});
+	});
+	document.querySelectorAll('a[href^="#top"]').forEach((anchor) => {
+		anchor.addEventListener("click", function (e) {
+			e.preventDefault();
+			window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+		});
+	});
 </script>

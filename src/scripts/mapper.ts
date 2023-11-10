@@ -8,7 +8,6 @@ import { Link } from "./models/link.ts";
 import { Image } from "./models/image.ts";
 import { Article } from "./models/article.ts";
 
-
 export function MapArticle(item: any) {
 	return new Article(
 		item.id,
@@ -89,7 +88,7 @@ export function MapHome(item: any) {
 }
 
 
-export function MapLink(item: any) {	
+export function MapLink(item: any) {
 	return new Link(
 		item.title,
 		item.url,

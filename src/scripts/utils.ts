@@ -3,14 +3,12 @@ import humanizeDuration from "humanize-duration";
 
 export function DynamicSortMultiple(...args: string[]) {
     var props = Array<any>();
-    /*Let's separate property name from ascendant or descendant keyword*/
     for (var i = 0; i < args.length; i++) {
         var splittedArg = args[i].split(/ +/);
         props[props.length] = [splittedArg[0], (splittedArg[1] ? splittedArg[1].toUpperCase() : "ASC")];
     }
     return function (obj1: any, obj2: any) {
         var i = 0, result = 0, numberOfProperties = props.length;
-        /*Cycle on values until find a difference!*/
         while (result === 0 && i < numberOfProperties) {
             result = DynamicSort(props[i][0], props[i][1])(obj1, obj2);
             i++;
@@ -41,13 +39,11 @@ export function GetBool(value: any) {
     return (value === null || value === undefined) ? false : value;
 }
 
-/*Base function returning -1,1,0 for custom sorting*/
 export function DynamicSort(property: string, isAscDesc: string) {
     return function (obj1: any, obj2: any) {
         if (isAscDesc === "DESC") {
             return ((obj1[property] > obj2[property]) ? (-1) : ((obj1[property] < obj2[property]) ? (1) : (0)));
         }
-        /*else, if isAscDesc==="ASC"*/
         return ((obj1[property] > obj2[property]) ? (1) : ((obj1[property] < obj2[property]) ? (-1) : (0)));
     }
 }
