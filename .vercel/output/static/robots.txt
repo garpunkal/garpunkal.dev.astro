@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://garpunkal.dev/sitemap-index.xml
