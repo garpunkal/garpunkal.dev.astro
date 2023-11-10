@@ -18,9 +18,9 @@ export default defineConfig({
     appShortName: "garpunkal.dev",
     appDescription: "garpunkal.dev",
     lang: "en-GB",
-    background: "#fff",
-    theme_color: "#fff",
-    faviconsDarkMode: false
+    background: "#077da0",
+    theme_color: "#077da0",
+    faviconsDarkMode: true
   })],
   output: "server",
   adapter: vercel()
