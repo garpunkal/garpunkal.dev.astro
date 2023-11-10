@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",  
+  "compilerOptions": {  
+    "allowImportingTsExtensions": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "types": [
+      "node"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+---
+import { Article } from "../scripts/models/article";
+interface Props {
+	article: Article;
+	cssClass: string;
+}
+
+const { article, cssClass } = Astro.props;
+---
+
+<div class={cssClass}>
+	<div class="flex-1">
+		<div class="center">
+			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
+				<figure class="relative">
+					<img src={article.cover_image} alt={article.title} title={article.title} class="rounded-t-lg dark:brightness-50 dark:hover:brightness-100" loading="lazy" width="404" height="170" />
+				</figure>
+			</a>
+		</div>
+		<div class="p-6">
+			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
+				<h2 class="mb-3 text-lg font-bold text-white dark:text-santa-grey min-h-56">
+					{article.title}
+				</h2>
+			</a>
+			<p class="mb-3 leading-relaxed text-iron dark:text-santa-grey">
+				{article.description}
+			</p>
+
+			{
+				article.tag_list.map((tag) => {
+					<div class="inline-flex items-center px-4 py-2 my-1 mr-1 text-xs font-medium text-mercury rounded bg-ocean dark:bg-ocean dark:text-mercury">
+						<a href={"https://dev.to/t/" + tag} target="_blank" rel="noopener" title={tag} class="text-white dark:text-iron hover:text-mirage dark:hover:text-white">
+							{tag}
+						</a>
+					</div>;
+				})
+			}
+		</div>
+	</div>
+</div>

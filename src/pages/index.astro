@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Projects from "../components/Projects.astro";
+import Articles from "../components/Articles.astro";
+import Experiences from "../components/Experiences.astro";
+import Footer from "../components/Footer.astro";
+
+import { GetExperiences, GetProjects, GetHome, GetArticles } from "../scripts/data.ts";
+
+const experiences = await GetExperiences();
+const projects = await GetProjects();
+const home = await GetHome();
+const articles = await GetArticles();
+---
+
+<Layout>
+	<main>
+		<Header home={home} />
+		<Projects home={home} projects={projects} />
+		<Articles home={home} articles={articles} />
+		<Experiences home={home} experiences={experiences} />
+		<Footer home={home} />
+	</main>
+</Layout>
+
+<script>	
+    document.querySelectorAll('a[href^="#projects"]').forEach((anchor) => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth",
+            });
+        });
+    });
+    document.querySelectorAll('a[href^="#top"]').forEach((anchor) => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        });
+    });
+</script>

@@ -1,0 +1,10 @@
+---
+import { Link } from "../scripts/models/link";
+
+interface Props {
+	link: Link;
+}
+
+const { link } = Astro.props;
+---
+<a href={link.url}  title={link.title} target="_blank" rel="noopener" class="text-white hover:text-mirage dark:text-pale-sky">{ link.title }</a>

@@ -1,0 +1,31 @@
+---
+import { Home } from "../scripts/models/home";
+import { Article } from "../scripts/models/article";
+import ArticleItem from "./ArticleItem.astro";
+import ArticleNano from "./ArticleNano.astro";
+
+interface Props {
+	home: Home;
+	articles: Array<Article>;
+}
+
+const { home, articles } = Astro.props;
+---
+
+<section class="bg-mirage dark:bg-gray-900 body-font" id="content">
+	<div class="container px-5 py-5 mx-auto md:py-14">
+		<a class="w-full" href="https://dev.to/garpunkal" target="_blank" rel="noopener" title="dev.to">
+			<h3 class="w-full mt-10 mb-20 text-3xl font-extrabold tracking-tighter text-center text-santa-grey sm:text-65xl lg:text-4xl dark:text-pale-sky lg:mt-0">
+				{home.articlesLabel}
+			</h3>
+		</a>
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+			{articles.slice(0, 3).map((article: Article) => <ArticleItem article={article} cssClass="h-full rounded-lg shadow-lg ring-4 ring-ocean dark:ring-ocean" />)}
+		</div>
+		<div class="lg:mx-14">
+			<div class="grid grid-cols-1 gap-4 mt-10 md:grid-cols-2">
+				{articles.slice(3, 11).map((article: Article) => <ArticleNano article={article} />)}
+			</div>
+		</div>
+	</div>
+</section>

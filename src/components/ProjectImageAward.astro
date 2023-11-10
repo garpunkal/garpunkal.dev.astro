@@ -1,0 +1,45 @@
+---
+import { Project } from "../scripts/models/project";
+interface Props {
+	project: Project;
+	large: boolean;
+}
+
+const { project, large } = Astro.props;
+---
+
+<figure class="relative">
+	{
+		project.position === "left top" ? (
+			<picture>
+				<source type="image/webp" srcset={large ? project.image.webp + "&width=615&height=340" : project.image.webp + "&width=300&height=165"} />
+				<img
+					alt={project.image.alt}
+					title={project.image.alt}
+					src={large ? project.image.url + "&width=615&height=340" : project.image.url + "&width=300&height=165"}
+					class="block object-left-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip-tree dark:ring-mirage ring-2 md:ring-4 shadow-award"
+					width={large ? 615 : 300}
+					height={large ? 340 : 165}
+					loading="lazy"
+				/>
+			</picture>
+		) : (
+			<picture>
+				<source type="image/webp" srcset={large ? project.image.webp + "&width=615&height=340" : project.image.webp + "&width=300&height=165"} />
+				<img
+					alt={project.image.alt}
+					title={project.image.alt}
+					src={large ? project.image.url + "&width=615&height=340" : project.image.url + "&width=300&height=165"}
+					class="block object-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip-tree dark:ring-mirage ring-2 md:ring-4 shadow-award"
+					width={large ? 615 : 300}
+					height={large ? 340 : 165}
+					loading="lazy"
+				/>
+			</picture>
+		)
+	}
+	<figcaption class="absolute bottom-0 left-0 px-2 py-1 text-xs text-black rounded-tr-lg rounded-bl-lg md:-left-1 md:-bottom-1 md:px-4 md:py-2 bg-tulip-tree dark:bg-mirage dark:text-santa-grey">
+		<span class="hidden font-bold lg:inline-block">Award Winner:</span>
+		{project.title}
+	</figcaption>
+</figure>
