@@ -18,7 +18,7 @@ squidexHeaders.append("retry", "3");
 squidexHeaders.append("retryDelay", "4000");
 
 export async function GetArticles(page = 1) {
-    let response = await fetch(DevToUrl + DevToApiKey + '?page=' +page, {
+    let response = await fetch(DevToUrl + DevToApiKey + '?page=' + page, {
         method: "GET",
         headers: {
             'api-key': DevToApiKey,

@@ -10,7 +10,7 @@ export class Experience {
     job: string;
     location: string;
     logo: Image;
-    url: Link;
+    url: string;
     shortUrl: string;
     from?: Date;
     to?: Date;
@@ -27,7 +27,7 @@ export class Experience {
         job: string,
         location: string,
         logo: Image,
-        url: Link,
+        url: string,
         shortUrl: string,
         isCurrent: boolean,
         description: string,

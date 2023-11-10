@@ -21,6 +21,7 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@types/humanize-duration": "^3.27.3",
     "@types/lodash": "^4.14.201",
     "humanize-duration": "^3.31.0"
   }

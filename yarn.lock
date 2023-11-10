@@ -677,6 +677,11 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/humanize-duration@^3.27.3":
+  version "3.27.3"
+  resolved "https://registry.yarnpkg.com/@types/humanize-duration/-/humanize-duration-3.27.3.tgz#fa49ada1cc65222d5f1295c7756b6877f5a96bcf"
+  integrity sha512-wiiiFYjnrYDJE/ujU7wS/NShqp12IKrejozjDtcejP0zYi+cjyjVcfZHwcFUDKVJ7tHGsmgeW2ED92ABIIjfpg==
+
 "@types/lodash@^4.14.201":
   version "4.14.201"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.201.tgz#76f47cb63124e806824b6c18463daf3e1d480239"

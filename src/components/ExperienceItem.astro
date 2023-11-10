@@ -13,7 +13,7 @@ const { experience } = Astro.props;
 		{
 			experience.url 
             ? 
-				<a href={experience.url.url} target="_blank" rel="noopener" title={experience.title} class="flex justify-center w-full h-full">
+				<a href={experience.url} target="_blank" rel="noopener" title={experience.title} class="flex justify-center w-full h-full">
 					<picture>
 						<source type="image/webp" srcset={experience.logo.webp} />
 						<img alt={experience.logo.alt} src={experience.logo.url} style={"backgroundColor:" + experience.logo.background} 
