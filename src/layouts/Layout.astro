@@ -1,5 +1,6 @@
 ---
 import "../styles/main.css";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 ---
 
 <!doctype html>
@@ -54,14 +55,9 @@ import "../styles/main.css";
 					display: none;
 				}
 			</style>
-		</noscript>
-		
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap"/>
-		<noscript>
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap">
-		</noscript>
+		</noscript>			
+		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap">
+		</GoogleFontsOptimizer>	
 	</head>
 	<body>
 		<slot />

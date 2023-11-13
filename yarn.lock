@@ -910,6 +910,11 @@ astro-favicons@^1.2.0:
   dependencies:
     favicons-lib "^7.1.6"
 
+astro-google-fonts-optimizer@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/astro-google-fonts-optimizer/-/astro-google-fonts-optimizer-0.2.2.tgz#93eff2a5c17713064675f70bce4c6f2fc4c2c50f"
+  integrity sha512-YQxp/ExF3NzUomAGuu1VKecO7/ETRnhnE50gqwAqfpbGPZFj4MYa4XxK1ukBg3R63QmKuE5uurOiKmXiLzttuw==
+
 astro-robots-txt@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/astro-robots-txt/-/astro-robots-txt-1.0.0.tgz"
