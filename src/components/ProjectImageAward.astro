@@ -14,7 +14,7 @@ const { project, large } = Astro.props;
 		project.position === "left top" ? (
 			<Picture
 				src={project.image.url}
-				formats={["avif", "webp"]}
+				formats={["webp"]}
 				widths={[192, 298, 403, 690]}
 				alt={project.image.alt}
 				class="block object-left-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip-tree dark:ring-mirage ring-2 md:ring-4 shadow-award"
@@ -26,7 +26,7 @@ const { project, large } = Astro.props;
 		) : (
 			<Picture
 				src={project.image.url}
-				formats={["avif", "webp"]}
+				formats={["webp"]}
 				widths={[192, 298, 403, 690]}
 				alt={project.image.alt}
 				class="block object-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip-tree dark:ring-mirage ring-2 md:ring-4 shadow-award"

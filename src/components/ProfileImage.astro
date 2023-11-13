@@ -11,6 +11,6 @@ const { image } = Astro.props;
 
 <button id="switchTheme" aria-label="dark mode" title="dark mode" class="w-full">
 	<div class="w-48 h-48 mx-auto bg-center bg-cover rounded-full lg:w-auto lg:h-auto">
-		<Picture src={image.url} formats={["avif", "webp"]} widths={[192, 690]} alt={image.alt} class="object-cover w-full h-full rounded-full lg:rounded-lg lg:block dark:brightness-50 dark:hover:brightness-100 ring-mirage dark:ring-ocean ring-4 filter-grayscale lg:shadow-2xl-black" width="690" height="690" />
+		<Picture src={image.url} formats={["webp"]} widths={[192, 690]} alt={image.alt} class="object-cover w-full h-full rounded-full lg:rounded-lg lg:block dark:brightness-50 dark:hover:brightness-100 ring-mirage dark:ring-ocean ring-4 filter-grayscale lg:shadow-2xl-black" width="690" height="690" />
 	</div>
 </button>
