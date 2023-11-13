@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 import robotsTxt from "astro-robots-txt";
 import favicons from "astro-favicons";
 
-
 export default defineConfig({
   site: 'https://garpunkal.dev',
   prefetch: true,
@@ -14,7 +13,7 @@ export default defineConfig({
       "cloud.squidex.io"
     ],
   },
-  integrations: [   
+  integrations: [
     tailwind(),
     sitemap(),
     robotsTxt({

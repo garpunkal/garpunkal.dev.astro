@@ -48,14 +48,17 @@ import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 		<link rel="me" href="https://mastodon.social/@garpunkal" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<script src="https://www.googletagmanager.com/gtag/js?id=G-3TJPB46KB1" async></script>
-		<noscript>
-			<style>
-				.g-image--loading {
-					display: none;
-				}
-			</style>
-		</noscript>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-3TJPB46KB1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-3TJPB46KB1");
+		</script>
 
 		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" />
 	</head>
