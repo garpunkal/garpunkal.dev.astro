@@ -1,12 +1,9 @@
 // @filename: squidex.ts
 import { DynamicSortMultiple, BuildList } from "./utils";
-import { MapExperience, MapProject, MapHome, MapArticle } from "./mapper";
+import { MapExperience, MapProject, MapHome } from "./mapper";
 import { Project } from './models/project';
 import { Experience } from './models/experience';
-import { Article } from './models/article';
 
-const DevToApiKey = import.meta.env.DEVTO_API_KEY;
-const DevToUrl = 'https://dev.to/api/articles/me/published?api-key=';
 const squidexUrl = "https://cloud.squidex.io/api/content/garpunkaldev/";
 
 let squidexHeaders = new Headers();
@@ -16,29 +13,6 @@ squidexHeaders.append("X-Languages", "en");
 squidexHeaders.append("timeout", "1000");
 squidexHeaders.append("retry", "3");
 squidexHeaders.append("retryDelay", "4000");
-
-export async function GetArticles(page = 1) {
-    let response = await fetch(DevToUrl + DevToApiKey + '?page=' + page, {
-        method: "GET",
-        headers: {
-            'api-key': DevToApiKey,
-            'Content-Type': 'application/json'
-        }
-    });
-
-    const posts = await response.json();
-
-    if (posts.length >= 30 && posts.length !== 0)
-        GetArticles(++page);
-
-    const articles: Article[] = [];
-
-    for (let post of posts)
-        articles.push(MapArticle(post))
-
-    articles.sort(DynamicSortMultiple("-published_at"));
-    return articles;
-}
 
 export async function GetExperiences() {
 

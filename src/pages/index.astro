@@ -6,7 +6,8 @@ import Articles from "../components/Articles.astro";
 import Experiences from "../components/Experiences.astro";
 import Footer from "../components/Footer.astro";
 
-import { GetExperiences, GetProjects, GetHome, GetArticles } from "../scripts/data.ts";
+import { GetExperiences, GetProjects, GetHome } from "../scripts/squidex.ts";
+import { GetArticles } from "../scripts/devto.ts";
 
 const experiences = await GetExperiences();
 const projects = await GetProjects();
