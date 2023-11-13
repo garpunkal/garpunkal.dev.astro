@@ -10,8 +10,7 @@ export default defineConfig({
   image: {
     domains: [
       "res.cloudinary.com",
-      "cloudinary.com",
-      "amazonaws.com"
+      "cloud.squidex.io"
     ],
   },
   integrations: [

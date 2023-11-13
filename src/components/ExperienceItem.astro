@@ -1,4 +1,5 @@
 ---
+import { Picture } from "astro:assets";
 import { Experience } from "../scripts/models/experience";
 import { GetMonthYear, GetMonths } from "../scripts/utils.ts";
 interface Props {
@@ -14,18 +15,35 @@ const { experience } = Astro.props;
 			experience.url 
             ? 
 				<a href={experience.url} target="_blank" rel="noopener" title={experience.title} class="flex justify-center w-full h-full">
-					<picture>
-						<source type="image/webp" srcset={experience.logo.webp} />
-						<img alt={"screenshot of " + experience.logo.alt} src={experience.logo.url} style={"backgroundColor:" + experience.logo.background} 
-                        class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel" width="100" height="100" loading="lazy" title={experience.logo.alt} />
-					</picture>
+
+					<Picture
+					src={experience.logo.url}
+					formats={["avif", "webp"]}
+					widths={[192, 298, 403, 690]}
+					alt={experience.logo.alt}
+					class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel"
+					loading="lazy"
+					title={experience.logo.alt}
+					width="100"
+					height="100"
+					style={"backgroundColor:" + experience.logo.background} 
+				/>
+				
 				</a>
 			:
-				<picture>
-					<source type="image/webp" srcset={experience.logo.webp} />
-					<img alt={"screenshot of " + experience.logo.alt} src={experience.logo.url} style={"backgroundColor:" + experience.logo.background}
-                     class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel" width="100" height="100" loading="lazy" title={experience.logo.alt} />
-				</picture>
+				
+				<Picture
+					src={experience.logo.url}
+					formats={["avif", "webp"]}
+					widths={[192, 298, 403, 690]}
+					alt={experience.logo.alt}
+					class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel"
+					loading="lazy"
+					title={experience.logo.alt}
+					width="100"
+					height="100"
+					style={"backgroundColor:" + experience.logo.background} 
+				/>
         }
 	</div>
 	<div class="w-full h-full mt-2">

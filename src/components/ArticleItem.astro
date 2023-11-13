@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import { Article } from "../scripts/models/article";
 import Tag from "./Tag.astro";
 interface Props {
@@ -15,7 +15,7 @@ const { article, cssClass } = Astro.props;
 		<div class="center">
 			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
 				<figure class="relative">
-					<Image src={article.cover_image} alt={article.title} title={article.title} class="rounded-t-lg dark:brightness-50 dark:hover:brightness-100" loading="lazy" width="404" height="170" />
+					<Picture src={article.cover_image} formats={["avif", "webp"]} widths={[172, 192, 298, 494]} alt={article.title} class="rounded-t-lg dark:brightness-50 dark:hover:brightness-100" loading="lazy" title={article.title} width="404" height="170" />
 				</figure>
 			</a>
 		</div>
@@ -28,9 +28,7 @@ const { article, cssClass } = Astro.props;
 			<p class="mb-3 leading-relaxed text-iron dark:text-santa-grey">
 				{article.description}
 			</p>
-			{
-				article.tag_list.map((tag:string) => <Tag tag={tag}/>)
-			}
+			{article.tag_list.map((tag: string) => <Tag tag={tag} />)}
 		</div>
 	</div>
 </div>

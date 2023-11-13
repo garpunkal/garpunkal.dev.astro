@@ -29,7 +29,6 @@ export function MapProject(item: any) {
 		item.data.position,
 		item.data.url,
 		new Image(
-			"https://cloud.squidex.io/api/assets/garpunkaldev/" + item.data.image + "?cache=31536000&format=WEBP",
 			"https://cloud.squidex.io/api/assets/garpunkaldev/" + item.data.image + "?cache=31536000",
 			"",
 			item.data.title
@@ -47,7 +46,6 @@ export function MapExperience(item: any, company: any, projects: Project[], cont
 		item.data.job,
 		item.data.location,
 		new Image(
-			"https://cloud.squidex.io/api/assets/garpunkaldev/" + company.data.logo + "?cache=31536000&format=WEBP",
 			"https://cloud.squidex.io/api/assets/garpunkaldev/" + company.data.logo + "?cache=31536000",
 			company.data.logoBackgroundColour,
 			company.data.title
@@ -72,7 +70,6 @@ export function MapHome(item: any) {
 		item.data.subTitle,
 		item.data.githubUrl,
 		new Image(
-			"https://cloud.squidex.io/api/assets/garpunkaldev/" + item.data.profileImage + "?cache=31536000&format=WEBP",
 			"https://cloud.squidex.io/api/assets/garpunkaldev/" + item.data.profileImage + "?cache=31536000",
 			"",
 			item.data.title

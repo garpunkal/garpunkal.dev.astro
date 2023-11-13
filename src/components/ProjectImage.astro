@@ -1,46 +1,45 @@
 ---
+import { Picture } from "astro:assets";
 import { Project } from "../scripts/models/project";
 interface Props {
-    project: Project
+	project: Project;
 	large: boolean;
 }
 
 const { project, large } = Astro.props;
 ---
 
-<div >
-<figure class="relative">
-	{
-		project.position === "left top" ? (
-			<picture>
-				<source type="image/webp" srcset={large ? project.image.webp + "&width=403&height=223" : project.image.webp + "&width=300&height=165"} />
-				<img
-					alt={"screenshot of " + project.image.alt}
-					title={project.image.alt}
-					src={large ? project.image.url + "&width=403&height=223" : project.image.url + "&width=298&height=164"}
+<div>
+	<figure class="relative">
+		{
+			project.position === "left top" ? (
+				<Picture
+					src={project.image.url}
+					formats={["avif", "webp"]}
+					widths={[192, 298, 403, 690]}
+					alt={project.image.alt}
 					class="block object-left-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-ocean dark:ring-mirage ring-4"
-					width={large ? 403 : 223}
-					height={large ? 298 : 164}
 					loading="lazy"
-				/>
-			</picture>
-		) : (
-			<picture>
-				<source type="image/webp" srcset={large ? project.image.webp + "&width=615&height=340" : project.image.webp + "&width=298&height=164"} />
-				<img
-					alt={"screenshot of " + project.image.alt}
 					title={project.image.alt}
-					src={large ? project.image.url + "&width=403&height=223" : project.image.url + "&width=298&height=164"}
-					class="block object-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-ocean dark:ring-mirage ring-4"
 					width={large ? 403 : 223}
 					height={large ? 298 : 164}
-					loading="lazy"
 				/>
-			</picture>
-		)
-	}
-	<figcaption class="absolute px-2 py-1 text-xs text-white rounded-tr-lg rounded-br-lg rounded-bl-lg -left-1 -bottom-1 md:px-4 md:py-2 bg-ocean dark:bg-mirage dark:text-santa-grey">
-		{project.title}
-	</figcaption>
-</figure>
+			) : (
+				<Picture
+					src={project.image.url}
+					formats={["avif", "webp"]}
+					widths={[192, 298, 403, 690]}
+					alt={project.image.alt}
+					class="block object-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-ocean dark:ring-mirage ring-4"
+					loading="lazy"
+					title={project.image.alt}
+					width={large ? 403 : 223}
+					height={large ? 298 : 164}
+				/>
+			)
+		}
+		<figcaption class="absolute px-2 py-1 text-xs text-white rounded-tr-lg rounded-br-lg rounded-bl-lg -left-1 -bottom-1 md:px-4 md:py-2 bg-ocean dark:bg-mirage dark:text-santa-grey">
+			{project.title}
+		</figcaption>
+	</figure>
 </div>
