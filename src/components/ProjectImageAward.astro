@@ -15,7 +15,7 @@ const { project, large } = Astro.props;
 			<Picture
 				src={project.image.url}
 				formats={["webp"]}
-				widths={[96, 192, 320, 640, 1024]}
+				widths={[156, 232, 317, 327, 403]}
 				alt={"screenshot of " + project.image.alt}
 				class="block object-left-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip-tree dark:ring-mirage ring-2 md:ring-4 shadow-award"
 				loading="lazy"
@@ -27,7 +27,7 @@ const { project, large } = Astro.props;
 			<Picture
 				src={project.image.url}
 				formats={["webp"]}
-				widths={[96, 192, 320, 640, 1024]}
+				widths={[156, 232, 317, 327, 403]}
 				alt={"screenshot of " + project.image.alt}
 				class="block object-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip-tree dark:ring-mirage ring-2 md:ring-4 shadow-award"
 				loading="lazy"
@@ -37,7 +37,9 @@ const { project, large } = Astro.props;
 			/>
 		)
 	}
-	<figcaption class="absolute bottom-0 left-0 px-2 py-1 text-xs text-black rounded-tr-lg rounded-bl-lg md:-left-1 md:-bottom-1 md:px-4 md:py-2 bg-tulip-tree dark:bg-mirage dark:text-santa-grey">
+	<figcaption
+		class="absolute bottom-0 left-0 px-2 py-1 text-xs text-black rounded-tr-lg rounded-bl-lg md:-left-1 md:-bottom-1 md:px-4 md:py-2 bg-tulip-tree dark:bg-mirage dark:text-santa-grey"
+	>
 		<span class="hidden font-bold lg:inline-block">Award Winner:</span>
 		{project.title}
 	</figcaption>
