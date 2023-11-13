@@ -48,35 +48,36 @@ import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 		<link rel="me" href="https://mastodon.social/@garpunkal" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<script src="https://www.googletagmanager.com/gtag/js?id=G-3TJPB46KB1" async></script>
-		<noscript>
-			<style>
-				.g-image--loading {
-					display: none;
-				}
-			</style>
-		</noscript>			
-		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap">
-		</GoogleFontsOptimizer>	
+		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-3TJPB46KB1"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-3TJPB46KB1");
+		</script>
+
+		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" />
 	</head>
 	<body>
 		<slot />
-	</body>
-	<script>
-		document.getElementById("switchTheme").addEventListener("click", function () {
-			let htmlClasses = document.querySelector("html").classList;
-			if (localStorage.theme == "dark") {
-				htmlClasses.remove("dark");
-				localStorage.theme = "light";
-			} else {
-				htmlClasses.add("dark");
-				localStorage.theme = "dark";
+		<script>
+			document.getElementById("switchTheme").addEventListener("click", function () {
+				let htmlClasses = document.querySelector("html").classList;
+				if (localStorage.theme == "dark") {
+					htmlClasses.remove("dark");
+					localStorage.theme = "light";
+				} else {
+					htmlClasses.add("dark");
+					localStorage.theme = "dark";
+				}
+			});
+			if (localStorage.theme === "dark") {
+				document.querySelector("html").classList.add("dark");
+			} else if (localStorage.theme === "dark") {
+				document.querySelector("html").classList.add("dark");
 			}
-		});
-		if (localStorage.theme === "dark") {
-			document.querySelector("html").classList.add("dark");
-		} else if (localStorage.theme === "dark") {
-			document.querySelector("html").classList.add("dark");
-		}
-	</script>
+		</script>
+	</body>
 </html>
