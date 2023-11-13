@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { Article } from "../scripts/models/article";
 interface Props {
 	article: Article;
@@ -12,7 +13,7 @@ const { article } = Astro.props;
 		<div class="grid grid-cols-12 gap-2 mb-5 md:mb-0">
 			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title} class="w-full h-full col-span-4">
 				<figure class="relative">
-					<img src={article.cover_image} alt={article.title} title={article.title} class="block object-left-top w-full h-auto border-4 rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 border-ocean" 
+					<Image src={article.cover_image} alt={article.title} title={article.title} class="block object-left-top w-full h-auto border-4 rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 border-ocean" 
 					loading="lazy" width="172" height="72" />
 				</figure>
 			</a>

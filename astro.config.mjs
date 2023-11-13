@@ -7,6 +7,13 @@ import favicons from "astro-favicons";
 export default defineConfig({
   site: 'https://garpunkal.dev',
   prefetch: true,
+  image: {
+    domains: [
+      "res.cloudinary.com",
+      "cloudinary.com",
+      "amazonaws.com"
+    ],
+  },
   integrations: [
     tailwind(),
     sitemap(),
