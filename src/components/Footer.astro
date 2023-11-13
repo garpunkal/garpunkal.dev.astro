@@ -8,31 +8,43 @@ interface Props {
 }
 
 const { home } = Astro.props;
-
 ---
+
 <footer>
 	<div class="text-santa-grey bg-ocean dark:text-iron dark:bg-black">
 		<div class="container flex flex-wrap px-10 py-8 mx-auto">
 			<UpArrow />
 
-			{ 
-				home.githubSource 
-				?
-					<div class="flex flex-wrap justify-center w-full" >
-						<a href={home.githubSource.url} title={home.githubSource.title} target="_blank" rel="noopener" class="inline-flex items-center font-bold text-white hover:text-mirage dark:text-pale-sky "
-							><svg class="h-4 pr-2 text-white fill-current hover:text-mirage dark:text-pale-sky " role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24px" height="100%">
+			{
+				home.githubSource ? (
+					<div class="flex flex-wrap justify-center w-full">
+						<a
+							href={home.githubSource.url}
+							title={home.githubSource.title}
+							target="_blank"
+							rel="noopener"
+							class="inline-flex items-center font-bold text-white hover:text-mirage dark:text-pale-sky "
+						>
+							<svg
+								class="h-4 pr-2 text-white fill-current hover:text-mirage dark:text-pale-sky "
+								role="img"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+								width="24px"
+								height="100%"
+							>
 								<title>{home.githubSource.title}</title>
-								<path
-									d={home.githubSource.svgPath}
-								/>
+								<path d={home.githubSource.svgPath} />
 							</svg>
-							{home.githubSource.title}</a>
+							{home.githubSource.title}
+						</a>
 					</div>
-				:
-					<div></div>
+				) : (
+					<div />
+				)
 			}
 			<div class="grid w-full grid-cols-1 gap-2 m-auto mt-10 text-center lg:w-2/3 md:grid-cols-5 md:text-sm">
-				{home.footerLinks.map((footerLink) => <FooterLink link={footerLink} />)}			
+				{home.footerLinks.map((footerLink) => <FooterLink link={footerLink} />)}
 			</div>
 		</div>
 	</div>
