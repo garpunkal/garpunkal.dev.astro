@@ -35,8 +35,8 @@ export async function GetExperiences() {
     const projectJson = await projectData.json();
 
     // experiences
-    
     const experiences: Experience[] = [];
+
     for (const item of experienceJson.items) {
         // filter relations
         const company = companyJson.items.find(function (x: { id: any; }) {
@@ -58,9 +58,11 @@ export async function GetProjects() {
         method: "GET",
         headers: squidexHeaders
     });
+
     const projectJson = await projectData.json();
 
     const projects: Project[] = [];
+
     for (const item of projectJson.items)
         if (item.data.IsHighlight === true) projects.push(MapProject(item));
     projects.sort(DynamicSortMultiple("-sortOrder", "title"));
