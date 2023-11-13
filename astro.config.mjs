@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from "astro-robots-txt";
 import favicons from "astro-favicons";
-import partytown from '@astrojs/partytown'
+import partytown from '@astrojs/partytown';
 
 export default defineConfig({
   site: 'https://garpunkal.dev',
