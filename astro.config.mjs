@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig,squooshImageService  } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from "astro-robots-txt";
@@ -6,8 +6,9 @@ import favicons from "astro-favicons";
 
 export default defineConfig({
   site: 'https://garpunkal.dev',
-  prefetch: true,
+  prefetch: true,  
   image: {
+    service: squooshImageService(),
     domains: [
       "res.cloudinary.com",
       "cloud.squidex.io"
