@@ -11,7 +11,13 @@ const { article } = Astro.props;
 <div>
 	<div>
 		<div class="grid grid-cols-12 gap-2 mb-5 md:mb-0">
-			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title} class="w-full h-full col-span-4">
+			<a
+				href={article.canonical_url}
+				target="_blank"
+				rel="noopener"
+				title={article.title}
+				class="w-full h-full col-span-4"
+			>
 				<figure class="relative">
 					<Picture
 						src={article.cover_image}
@@ -26,7 +32,13 @@ const { article } = Astro.props;
 					/>
 				</figure>
 			</a>
-			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title} class="flex items-center w-full col-span-8 pr-4">
+			<a
+				href={article.canonical_url}
+				target="_blank"
+				rel="noopener"
+				title={article.title}
+				class="flex items-center w-full col-span-8 pr-4"
+			>
 				<h2 class="text-sm font-medium text-white dark:text-mercury">
 					{article.title}
 				</h2>
