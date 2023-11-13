@@ -1,4 +1,4 @@
-	---
+---
 import { Home } from "../scripts/models/home";
 import { Project } from "../scripts/models/project";
 import ProjectItem from "./ProjectItem.astro";
@@ -11,20 +11,39 @@ interface Props {
 const { home, projects } = Astro.props;
 
 const sortedProjects = projects
-	.sort((n1, n2) => n1.sortOrder > n2.sortOrder ? 1: n1.sortOrder < n2.sortOrder ? -1 : 0)			
+	.sort((n1, n2) => (n1.sortOrder > n2.sortOrder ? 1 : n1.sortOrder < n2.sortOrder ? -1 : 0))
 	.reverse();
 ---
+
 <section class="text-pale-sky bg-mirage dark:text-iron dark:bg-gray-900 body-font" id="projects">
 	<div class="container px-5 py-5 mx-auto md:py-14">
-		<h3 class="w-full mt-10 mb-20 text-3xl font-extrabold tracking-tighter text-center text-santa-grey sm:text-65xl lg:text-4xl dark:text-pale-sky lg:mt-0">
+		<h3
+			class="w-full mt-10 mb-20 text-3xl font-extrabold tracking-tighter text-center text-santa-grey sm:text-65xl lg:text-4xl dark:text-pale-sky lg:mt-0"
+		>
 			{home.projectsLabel}
 		</h3>
 		<div class="flex flex-wrap -m-1 md:-m-2">
-			{sortedProjects.slice(0, 9).map((project: Project) => <ProjectItem project={project} large={true} cssClass="flex flex-wrap w-full lg:flex-grow md:w-1/3 lg:w-1/3 p-2" />)}
-			{sortedProjects
-				.slice(9, projects.length)
-				.sort((a, b) => a.title.localeCompare(b.title))
-				.map((project: Project) => <ProjectItem project={project} large={false} cssClass="flex flex-wrap w-1/2 md:w-1/4 lg:w-1/4 p-2" />)}
+			{
+				sortedProjects
+					.slice(0, 9)
+					.map((project: Project) => (
+						<ProjectItem
+							project={project}
+							large={true}
+							cssClass="flex flex-wrap w-full lg:flex-grow md:w-1/3 lg:w-1/3 p-2"
+						/>
+					))
+			}
+		</div>
+		<div class="flex flex-wrap -m-1 md:-m-2">
+			{
+				sortedProjects
+					.slice(9, projects.length)
+					.sort((a, b) => a.title.localeCompare(b.title))
+					.map((project: Project) => (
+						<ProjectItem project={project} large={false} cssClass="flex flex-wrap w-1/2 md:w-1/4 lg:w-1/4 p-2" />
+					))
+			}
 		</div>
 	</div>
 </section>
