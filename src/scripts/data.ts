@@ -28,10 +28,10 @@ export async function GetArticles(page = 1) {
 
     const posts = await response.json();
 
-    if (posts.length >= 30 && posts.length !== 0) {
+    if (posts.length >= 30 && posts.length !== 0)
         GetArticles(++page);
-    }
-    const articles = new Array<Article>();
+
+    const articles: Article[] = [];
 
     for (let post of posts)
         articles.push(MapArticle(post))
@@ -61,7 +61,8 @@ export async function GetExperiences() {
     const projectJson = await projectData.json();
 
     // experiences
-    const experiences = new Array<Experience>();
+    
+    const experiences: Experience[] = [];
     for (const item of experienceJson.items) {
         // filter relations
         const company = companyJson.items.find(function (x: { id: any; }) {
@@ -84,7 +85,8 @@ export async function GetProjects() {
         headers: squidexHeaders
     });
     const projectJson = await projectData.json();
-    const projects = new Array<Project>();
+
+    const projects: Project[] = [];
     for (const item of projectJson.items)
         if (item.data.IsHighlight === true) projects.push(MapProject(item));
     projects.sort(DynamicSortMultiple("-sortOrder", "title"));

@@ -2,7 +2,7 @@
 import humanizeDuration from "humanize-duration";
 
 export function DynamicSortMultiple(...args: string[]) {
-    var props = Array<any>();
+    const props: any[] = []
     for (var i = 0; i < args.length; i++) {
         var splittedArg = args[i].split(/ +/);
         props[props.length] = [splittedArg[0], (splittedArg[1] ? splittedArg[1].toUpperCase() : "ASC")];
@@ -18,7 +18,7 @@ export function DynamicSortMultiple(...args: string[]) {
 }
 
 export function BuildList(selection: any, source: any) {
-    var items = new Array<any>;
+    const items: any[] = []
     if (selection)
         selection.forEach(function (item: any) {
             const found = source.find((x: any) => x.id == item);

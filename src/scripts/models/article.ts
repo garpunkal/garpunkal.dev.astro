@@ -4,7 +4,7 @@ export class Article {
     title: string;
     published_at: string;
     description: string;
-    tag_list: Array<string>;
+    tag_list: string[];
     canonical_url: string;
     cover_image: string;
     positive_reactions_count: number;
@@ -15,7 +15,7 @@ export class Article {
         title: string,
         published_at: string,
         description: string,
-        tag_list: Array<string>,
+        tag_list: string[],
         canonical_url: string,
         cover_image: string,
         positive_reactions_count: number,

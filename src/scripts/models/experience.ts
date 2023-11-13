@@ -16,8 +16,8 @@ export class Experience {
     isCurrent: boolean;
     description: string;
     hideDescription: boolean;
-    projects: Array<Project>;
-    contributions: Array<Project>;
+    projects: Project[];
+    contributions: Project[];
     orderDate?: Date;
 
     constructor(
@@ -31,8 +31,8 @@ export class Experience {
         isCurrent: boolean,
         description: string,
         hideDescription: boolean,
-        projects: Array<Project>,
-        contributions: Array<Project>,
+        projects: Project[],
+        contributions: Project[],
         from?: Date,
         to?: Date,
         orderDate?: Date

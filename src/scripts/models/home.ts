@@ -10,9 +10,9 @@ export class Home {
     githubUrl: string;
     image: Image;
     githubSource: Link;
-    specialisms: Array<Link>;
-    socials: Array<Link>;
-    footerLinks: Array<Link>;
+    specialisms: Link[];
+    socials: Link[];
+    footerLinks: Link[];
     projectsLabel: string;
     articlesLabel: string;
     experiencesLabel: string
@@ -24,9 +24,9 @@ export class Home {
         githubUrl: string,
         image: Image,
         githubSource: Link,
-        specialisms: Array<Link>,
-        socials: Array<Link>,
-        footerLinks: Array<Link>,
+        specialisms: Link[],
+        socials: Link[],
+        footerLinks: Link[],
         projectsLabel: string,
         articlesLabel: string,
         experiencesLabel: string

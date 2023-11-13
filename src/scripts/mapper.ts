@@ -40,7 +40,7 @@ export function MapProject(item: any) {
 	);
 }
 
-export function MapExperience(item: any, company: any, projects: Array<Project>, contribs: Array<Project>) {
+export function MapExperience(item: any, company: any, projects: Project[], contribs: Project[]) {
 	return new Experience(
 		item.data.id,
 		company.data.title,
