@@ -18,7 +18,7 @@ const { article, cssClass } = Astro.props;
 					<Picture
 						src={article.cover_image}
 						formats={["webp"]}
-						widths={[404]}
+						widths={[96, 192, 320, 640, 1024]}
 						alt={article.title}
 						class="rounded-t-lg dark:brightness-50 dark:hover:brightness-100"
 						loading="lazy"
