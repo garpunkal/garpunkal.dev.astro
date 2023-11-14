@@ -29,6 +29,7 @@ export default defineConfig({
       lang: "en-GB",
       background: "#077da0",
       theme_color: "#077da0",
-      faviconsDarkMode: false
+      faviconsDarkMode: false,
+      manifestMaskable: true
     })]
 });  
