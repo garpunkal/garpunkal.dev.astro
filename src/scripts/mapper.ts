@@ -7,6 +7,7 @@ import { Experience } from "./models/experience.ts";
 import { Link } from "./models/link.ts";
 import { Image } from "./models/image.ts";
 import { Article } from "./models/article.ts";
+import { Skill } from "./models/skill.ts";
 
 export function MapArticle(item: any) {
 	return new Article(
@@ -63,6 +64,16 @@ export function MapExperience(item: any, company: any, projects: Project[], cont
 	);
 }
 
+export function MapSkill(item: any) {
+	return new Skill(
+		item.data.url,
+		item.data.background,
+		item.data.foreground,
+        item.data.title,
+        item.data.percentage	
+	);
+}
+
 export function MapHome(item: any) {
 	return new Home(
 		item.id,
@@ -81,6 +92,7 @@ export function MapHome(item: any) {
 		item.data.projectsLabel,
 		item.data.articlesLabel,
 		item.data.experiencesLabel,
+		item.data.skillsLabel,
 	);
 }
 

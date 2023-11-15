@@ -1,0 +1,21 @@
+---
+import { Skill } from "../scripts/models/skill";
+
+interface Props {
+	skill: Skill;
+}
+
+const { skill } = Astro.props;
+---
+
+<div class="block text-white bg-gray-800 dark:text-iron dark:bg-black rounded m-2 p-3">
+	{
+		skill.url ? (
+			<a href={skill.url} title={skill.title} target="_blank" rel="noopener">
+				{skill.title}
+			</a>
+		) : (
+			<span>{skill.title}</span>
+		)
+	}
+</div>

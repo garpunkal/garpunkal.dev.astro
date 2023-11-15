@@ -1,8 +1,9 @@
 // @filename: squidex.ts
 import { DynamicSortMultiple, BuildList } from "./utils";
-import { MapExperience, MapProject, MapHome } from "./mapper";
+import { MapExperience, MapProject, MapHome, MapSkill } from "./mapper";
 import { Project } from './models/project';
 import { Experience } from './models/experience';
+import { Skill } from './models/skill';
 
 const squidexUrl = "https://cloud.squidex.io/api/content/garpunkaldev/";
 
@@ -65,11 +66,31 @@ export async function GetProjects() {
 
     for (const item of projectJson.items)
         if (item.data.IsHighlight === true) projects.push(MapProject(item));
+
     projects.sort(DynamicSortMultiple("-sortOrder", "title"));
 
     return projects;
-
 }
+
+
+export async function GetSkills() {
+    const skillsData = await fetch(squidexUrl + "skill", {
+        method: "GET",
+        headers: squidexHeaders
+    });
+
+    const skillsJson = await skillsData.json();
+
+    const skills: Skill[] = [];
+
+    for (const item of skillsJson.items)
+        skills.push(MapSkill(item));
+
+    skills.sort(DynamicSortMultiple("-sortOrder", "title percentage"));
+
+    return skills;
+}
+
 
 export async function GetHome() {
     const homeData = await fetch(squidexUrl + "home", {

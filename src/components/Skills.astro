@@ -1,0 +1,25 @@
+---
+import { Home } from "../scripts/models/home";
+import { Skill } from "../scripts/models/skill";
+import SkillItem from "./SkillItem.astro";
+
+interface Props {
+	home: Home;
+	skills: Skill[];
+}
+
+const { home, skills } = Astro.props;
+---
+
+<section class="text-pale-sky bg-mirage dark:text-iron dark:bg-gray-900 body-font" id="skills">
+	<div class="container px-5 py-5 mx-auto md:py-14">
+		<h3
+			class="w-full mt-10 mb-20 text-3xl font-extrabold tracking-tighter text-center text-santa-grey sm:text-65xl lg:text-4xl dark:text-pale-sky lg:mt-0"
+		>
+			{home.skillsLabel}
+		</h3>
+		<div class="flex flex-wrap -m-1 md:-m-2 justify-center">
+			{skills.map((skill: Skill) => <SkillItem skill={skill} />)}
+		</div>
+	</div>
+</section>
