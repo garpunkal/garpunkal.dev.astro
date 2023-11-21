@@ -39,14 +39,12 @@ export async function GetExperiences() {
     const experiences: Experience[] = [];
 
     for (const item of experienceJson.items) {
-        // filter relations
         const company = companyJson.items.find(function (x: { id: any; }) {
             return x.id === item.data.company[0];
         });
 
         const projects = BuildList(item.data.projects, projectJson.items);
         const contribs = BuildList(item.data.contributions, projectJson.items);
-        // map
         experiences.push(MapExperience(item, company, projects, contribs));
     }
     experiences.sort(DynamicSortMultiple("-orderDate"));

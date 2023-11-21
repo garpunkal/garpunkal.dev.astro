@@ -1,5 +1,4 @@
 // @filename: home.ts
-
 import type { Image } from "./image.ts";
 import type { Link } from "./link.ts";
 

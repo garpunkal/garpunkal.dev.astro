@@ -1,5 +1,4 @@
 // @filename: experience.ts
-
 import type { Image } from "./image.ts";
 import type { Project } from "./project.ts";
 
