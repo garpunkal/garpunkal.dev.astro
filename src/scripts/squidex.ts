@@ -4,7 +4,8 @@ import { MapExperience, MapProject, MapHome } from "./mapper";
 import { Project } from './models/project';
 import { Experience } from './models/experience';
 
-const squidexUrl = "https://cloud.squidex.io/api/content/garpunkaldev/";
+const squidexKey = import.meta.env.SQUIDEX_KEY;
+const squidexUrl = "https://cloud.squidex.io/api/content/" + squidexKey + "/";
 
 let squidexHeaders = new Headers();
 squidexHeaders.append("X-Flatten", "true");

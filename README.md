@@ -8,6 +8,7 @@ The build currently utilises [SquidexCMS](https://squidex.io), [Astro](https://a
 
 ## .env file
 DEVTO_API_KEY=XXXXXXXXXXXXX (key from dev.to)
+SQUIDEX_KEY=YYYYYYYYY (key from squidex)
 
 ## License 
 [MIT License](LICENSE.md)

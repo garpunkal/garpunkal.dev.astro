@@ -3,14 +3,14 @@ import { Article } from './models/article';
 import { DynamicSortMultiple } from "./utils";
 import { MapArticle } from "./mapper";
 
-const DevToApiKey = import.meta.env.DEVTO_API_KEY;
-const DevToUrl = 'https://dev.to/api/articles/me/published?api-key=';
+const devToApiKey = import.meta.env.DEVTO_API_KEY;
+const devToUrl = 'https://dev.to/api/articles/me/published?api-key=';
 
 export async function GetArticles(page = 1) {
-    let response = await fetch(DevToUrl + DevToApiKey + '?page=' + page, {
+    let response = await fetch(devToUrl + devToApiKey + '?page=' + page, {
         method: "GET",
         headers: {
-            'api-key': DevToApiKey,
+            'api-key': devToApiKey,
             'Content-Type': 'application/vnd.forem.api-v1+json'
         }
     });
