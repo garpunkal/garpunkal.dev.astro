@@ -21,7 +21,7 @@ export async function GetExperiences() {
         headers: squidexHeaders
     });
     const experienceJson = await experienceData.json();
-
+ 
     const companyData = await fetch(squidexUrl + "company", {
         headers: squidexHeaders
     });
