@@ -18,19 +18,16 @@ squidexHeaders.append("retryDelay", "4000");
 export async function GetExperiences() {
 
     const experienceData = await fetch(squidexUrl + "experience", {
-        method: "GET",
         headers: squidexHeaders
     });
     const experienceJson = await experienceData.json();
 
     const companyData = await fetch(squidexUrl + "company", {
-        method: "GET",
         headers: squidexHeaders
     });
     const companyJson = await companyData.json();
 
     const projectData = await fetch(squidexUrl + "project", {
-        method: "GET",
         headers: squidexHeaders
     });
     const projectJson = await projectData.json();
@@ -54,7 +51,6 @@ export async function GetExperiences() {
 
 export async function GetProjects() {
     const projectData = await fetch(squidexUrl + "project", {
-        method: "GET",
         headers: squidexHeaders
     });
 
@@ -72,7 +68,6 @@ export async function GetProjects() {
 
 export async function GetHome() {
     const homeData = await fetch(squidexUrl + "home", {
-        method: "GET",
         headers: squidexHeaders
     });
 
