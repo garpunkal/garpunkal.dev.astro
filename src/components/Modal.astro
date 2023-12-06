@@ -21,13 +21,13 @@ const { title, subTitle, url, urlTitle, urlText } = Astro.props;
 				{title}
 			</h1>
 			<h2
-				class="mb-5 text-2xl font-extrabold tracking-tighter md:mb-8 sm:text-3xl lg:text-4xl text-mirage dark:text-pale-sky"
+				class="mb-5 text-2xl font-extrabold tracking-tighter md:mb-8 sm:text-3xl lg:text-4xl text-mirage dark:text-pale"
 			>
 				{subTitle}
 			</h2>
 			{
 				url ? (
-					<h3 class="mb-5 font-extrabold tracking-tighter text-pale-sky underline md:mb-8 text-1xl sm:text-1xl lg:text-2xl dark:text-pale-sky">
+					<h3 class="mb-5 font-extrabold tracking-tighter text-pale underline md:mb-8 text-1xl sm:text-1xl lg:text-2xl dark:text-pale">
 						<a href={url} title={urlTitle}>{urlText}</a>
 					</h3>
 				) : (

@@ -30,11 +30,11 @@ const { article, cssClass } = Astro.props;
 		</div>
 		<div class="p-6">
 			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
-				<h2 class="mb-3 text-lg font-bold text-white dark:text-cool-grey min-h-56">
+				<h2 class="mb-3 text-lg font-bold text-white dark:text-cool min-h-56">
 					{article.title}
 				</h2>
 			</a>
-			<p class="mb-3 leading-relaxed text-iron dark:text-cool-grey">
+			<p class="mb-3 leading-relaxed text-iron dark:text-cool">
 				{article.description}
 			</p>
 			{article.tag_list.map((tag: string) => <Tag tag={tag} />)}

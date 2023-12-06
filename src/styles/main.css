@@ -5,15 +5,15 @@
 	}
 
 	h2 {
-		@apply text-mirage dark:text-pale-sky;
+		@apply text-mirage dark:text-pale;
 	}
 
 	h3 {
-		@apply text-vampire dark:text-pale-sky;
+		@apply text-vampire dark:text-pale;
 	}
 
 	a {
-		@apply text-cool-grey dark:text-ocean hover:text-ocean;
+		@apply text-cool dark:text-ocean hover:text-ocean;
 	}
 
 	:root {
