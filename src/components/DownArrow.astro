@@ -5,15 +5,16 @@ interface Props {
 
 const { anchor } = Astro.props;
 ---
+
 <a href={"#" + anchor} title="down">
 	<svg
-		class="w-6 h-6 animate-bounce"
+		class="w-6 h-6 animate-bounce text-white dark:text-iron"
 		fill="none"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="2"
 		viewBox="0 0 24 24"
-		stroke="white"
+		stroke="currentColor"
 		width="24px"
 		height="100%"
 	>
