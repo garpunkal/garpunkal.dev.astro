@@ -37,5 +37,6 @@
   "devDependencies": {
     "@types/humanize-duration": "^3.27.3",
     "humanize-duration": "^3.31.0"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

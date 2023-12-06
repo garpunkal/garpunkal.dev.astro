@@ -7,8 +7,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
-    "types": [
-      "node"
-    ]
+    "types": [ "node" ]
   }
 }

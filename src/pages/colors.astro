@@ -2,10 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import colors from "../../config/colors.json";
 ---
+
 <Layout>
-	<main>          
-        <ul>
-            
-          </ul>
-    </main>
+	<main>
+		<div class="px-0 flex flex-wrap mx-auto">
+			{
+				Object
+                    .entries(colors)
+					.sort()
+					.map((data) => (
+						<div class={"w-1/2 md:w-1/4 lg:w-1/6 aspect-square p-4 flex flex-col items-center justify-center bg-" + data[0]}>
+							<h2 class="mix-blend-difference text-xl font-extrabold tracking-tighter sm:text-2xl md:text-3xl lg:text-4xl ">
+								{data[0].toLowerCase()}
+								<small class="block">{data[1].replace(/\-/g, " ").toUpperCase()}</small>
+							</h2>
+						</div>
+					))
+			}
+		</div>
+	</main>
 </Layout>

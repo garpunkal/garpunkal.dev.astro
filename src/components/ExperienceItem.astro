@@ -66,14 +66,14 @@ const { experience } = Astro.props;
 							CURRENT
 						</span>
 					) : (
-						<span class="inline-block px-4 py-2 my-1 text-sm text-white uppercase bg-gray-800 rounded dark:text-pale-sky dark:bg-gray-800 last:mr-0">
+						<span class="inline-block px-4 py-2 my-1 text-sm text-white uppercase bg-dark-slate-grey rounded dark:text-mercury dark:bg-dark-slate-grey last:mr-0">
 							{GetMonthYear(experience.to)}
 						</span>
 					)
 				}
 				 -
 				<span
-					class="inline-block px-4 py-2 my-1 text-sm text-white uppercase bg-gray-800 rounded dark:text-pale-sky dark:bg-gray-800 last:mr-0"
+					class="inline-block px-4 py-2 my-1 text-sm text-white uppercase bg-dark-slate-grey rounded dark:text-mercury dark:bg-dark-slate-grey last:mr-0"
 					>{GetMonthYear(experience.from)}</span
 				>
 			</p>
