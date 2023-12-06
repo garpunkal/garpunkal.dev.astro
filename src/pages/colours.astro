@@ -1,10 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Modal from "../components/Modal.astro";
 import colors from "../../config/colors.json";
 ---
 
-<Layout>
+<Layout title="Colours - garpunkal.dev">
 	<main>
+		<Modal title="Colours" subTitle="Tailwind Palette" url="/" urlTitle="Homepage" urlText="back to homepage"/>
+
 		<div class="px-0 flex flex-wrap mx-auto">
 			{
 				Object
@@ -22,3 +25,4 @@ import colors from "../../config/colors.json";
 		</div>
 	</main>
 </Layout>
+ 

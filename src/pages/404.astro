@@ -1,10 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import FileNotFound from "../components/FileNotFound.astro";
+import Modal from "../components/Modal.astro";
 ---
 
-<Layout>
+<Layout title="404 File Not Found - garpunkal.dev">
 	<main>
-		<FileNotFound>
+		<Modal title="404" subTitle="File Not Found" url="/" urlTitle="Homepage" urlText="back to homepage" />
 	</main>
 </Layout>

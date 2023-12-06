@@ -9,11 +9,11 @@
 	}
 
 	h3 {
-		@apply text-davy-grey dark:text-pale-sky;
+		@apply text-vampire dark:text-pale-sky;
 	}
 
 	a {
-		@apply text-santa-grey dark:text-ocean hover:text-ocean;
+		@apply text-cool-grey dark:text-ocean hover:text-ocean;
 	}
 
 	:root {
@@ -36,6 +36,6 @@
 @tailwind components;
 @layer components {
 	.shadow-award {
-		@apply shadow-2xl-tulip-tree dark:shadow-2xl-ocean;
+		@apply shadow-2xl-tulip dark:shadow-2xl-ocean;
 	}
 }
