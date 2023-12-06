@@ -24,11 +24,11 @@
 @tailwind utilities;
 
 @layer utilities {
-	dark:hover.brightness-50 {
+	.brightness-50 {
 		filter: brightness(0.5);
 	}
 
-	dark:hover.brightness-100 {
+	.brightness-100 {
 		filter: brightness(1);
 	}
 }
