@@ -13,11 +13,7 @@ for (let colorKey in colors) {
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	safelist: [
-		...colorClasses,
-		"list-outside",
-		"list-disc",
-		"h-6",
-		"w-6"
+		...colorClasses
 	],
 	theme: {		
 		screens: {
@@ -57,13 +53,7 @@ module.exports = {
 			width: (theme) => ({
 				"100pixel": "100px"
 			}),
-			height: (theme) => ({
-				"screen/2": "50vh",
-				"screen/3": "calc(100vh / 3)",
-				"screen/4": "calc(100vh / 4)",
-				"screen/5": "calc(100vh / 5)",
-				"screen/75": "75vh",
-				"screen/55": "55vh",
+			height: (theme) => ({			
 				"144": "40rem",
 				"100pixel": "100px"
 			}),
