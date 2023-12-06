@@ -64,12 +64,14 @@ const { title } = Astro.props;
 			gtag("js", new Date());
 			gtag("config", "G-3TJPB46KB1");
 		</script>
-
-		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" />
+		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" />	
 	</head>
 	<body>
 		<slot />
 		<script>
+			if (localStorage.theme === "dark") 
+				document.querySelector("html").classList.add("dark");		
+		
 			let element = document.getElementById("switchTheme");
 			if (element != null) {
 				element.addEventListener("click", function () {
@@ -82,11 +84,6 @@ const { title } = Astro.props;
 						localStorage.theme = "dark";
 					}
 				});
-			}
-			if (localStorage.theme === "dark") {
-				document.querySelector("html").classList.add("dark");
-			} else if (localStorage.theme === "dark") {
-				document.querySelector("html").classList.add("dark");
 			}
 		</script>
 	</body>
