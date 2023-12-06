@@ -6,6 +6,7 @@ import favicons from "astro-favicons";
 
 export default defineConfig({
   site: 'https://garpunkal.dev',
+  prefetch: true,
   image: {
     service: squooshImageService(),
     domains: [

@@ -9,6 +9,7 @@ interface Props {
 
 const { home } = Astro.props;
 ---
+
 <footer>
 	<div class="text-santa-grey bg-ocean dark:text-iron dark:bg-black">
 		<div class="container flex flex-wrap px-10 py-8 mx-auto">
@@ -42,7 +43,16 @@ const { home } = Astro.props;
 					<div />
 				)
 			}
-			<div class="grid w-full grid-cols-1 gap-2 m-auto mt-10 text-center lg:w-2/3 md:grid-cols-5 md:text-sm">
+
+			<div class="grid w-full grid-cols-1 gap-2 m-auto mt-10 text-center lg:w-2/3 md:grid-cols-6 md:text-sm">
+				<a
+					href="/colours"
+					title="Colours"
+					data-astro-prefetch="tap"
+					target="_blank"
+					rel="noopener"
+					class="text-white hover:text-mirage dark:text-pale-sky">Colours</a
+				>
 				{home.footerLinks.map((footerLink) => <FooterLink link={footerLink} />)}
 			</div>
 		</div>
