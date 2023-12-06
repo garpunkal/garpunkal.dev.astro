@@ -1,15 +1,25 @@
 /** @type {import('tailwindcss').Config} */
+
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('./config/colors.json');
+
+const colorClasses = [];
+for (let colorKey in colors) {
+	colorClasses.push('bg-' + colorKey);
+	colorClasses.push('text-' + colorKey);
+	colorClasses.push('fill-' + colorKey);
+}
+
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	safelist: [
+		...colorClasses,
 		"list-outside",
 		"list-disc",
-		"text-tulip-tree",
 		"h-6",
 		"w-6"
 	],
-	theme: {
+	theme: {		
 		screens: {
 			sm: "375px",
 			md: "768px",
@@ -37,15 +47,8 @@ module.exports = {
 			'56': "56px"
 		},
 		extend: {
-			colors: {
-				ocean: "#077da0",
-				mirage: "#111827",
-				"tulip-tree": "#e3b440",
-				"iron": "#d1d5db",
-				"santa-grey": "#9CA3AF",
-				"mercury": "#E5E7EB",
-				"pale-sky": "#6B7280",
-				"davy-grey": "#4B5563"
+			colors: { 
+				...colors
 			},
 			spacing: {
 				"96": "24rem",
@@ -70,7 +73,7 @@ module.exports = {
 				"2xl-tulip-tree": '10px 10px 50px -20px rgba(231, 166, 26, 1)',
 				"2xl-ocean": '10px 10px 50px -20px rgba(7, 125, 160, 1)',
 			}
-		}
+		}  
 	},
 	plugins: [],
 	darkMode: "class"
