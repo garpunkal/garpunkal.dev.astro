@@ -1,12 +1,12 @@
 // @filename: mappers.ts
 
-import { GetDate, GetBool } from "./utils.ts";
-import { Project } from "./models/project.ts";
-import { Home } from "./models/home.ts";
-import { Experience } from "./models/experience.ts";
-import { Link } from "./models/link.ts";
-import { Image } from "./models/image.ts";
-import { Article } from "./models/article.ts";
+import { GetDate, GetBool } from "./utils";
+import { Project } from "./models/project";
+import { Home } from "./models/home";
+import { Experience } from "./models/experience";
+import { Link } from "./models/link";
+import { Image } from "./models/image";
+import { Article } from "./models/article";
 
 export function MapArticle(item: any) {
 	return new Article(
