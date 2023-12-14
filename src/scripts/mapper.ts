@@ -35,7 +35,10 @@ export function MapProject(item: any) {
 		),
 		item.data.SortOrder ?? 0,
 		GetBool(item.data.IsHighlight),
-		GetBool(item.data.IsWinner)
+		GetBool(item.data.IsWinner),
+		item.data.winnerLabel,
+		item.data.winnerDescription,
+		item.data.winnerUrl
 	);
 }
 

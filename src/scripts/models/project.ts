@@ -10,6 +10,9 @@ export class Project {
     sortOrder: number;
     isHighlight: boolean;
     isWinner: boolean;
+    winnerLabel: string;
+    winnerDescription: string;
+    winnerUrl: string;
 
     constructor(
         id: number,
@@ -19,7 +22,10 @@ export class Project {
         image: Image,
         sortOrder: number,
         isHighlight: boolean,
-        isWinner: boolean
+        isWinner: boolean,
+        winnerLabel: string,
+        winnerDescription: string,
+        winnerUrl: string
     ) {
         this.id = id;
         this.title = title;
@@ -29,6 +35,9 @@ export class Project {
         this.sortOrder = sortOrder;
         this.isHighlight = isHighlight;
         this.isWinner = isWinner;
+        this.winnerLabel = winnerLabel;
+        this.winnerDescription = winnerDescription;
+        this.winnerUrl = winnerUrl;
     }
 }
 
