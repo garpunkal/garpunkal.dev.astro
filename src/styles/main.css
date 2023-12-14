@@ -17,7 +17,7 @@
 	}
 
 	:root {
-		@apply bg-ocean dark:bg-black;		
+		@apply bg-ocean dark:bg-black scroll-smooth;
 	}
 }
 
@@ -36,6 +36,6 @@
 @tailwind components;
 @layer components {
 	.shadow-award {
-		@apply shadow-2xl-tulip dark:shadow-2xl-ocean;
+		@apply shadow-3xl-tulip dark:shadow-3xl-ocean;
 	}
 }
