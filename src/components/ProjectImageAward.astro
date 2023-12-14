@@ -15,25 +15,25 @@ const { project, large } = Astro.props;
 			<Picture
 				src={project.image.url}
 				formats={["webp"]}
-				widths={[128, 156, 170, 232, 298, 317, 327, 403, 604, 612, 930]}
+				widths={[128, 156, 170, 232, 298, 317, 327, 403, 604, 930]}
 				alt={"screenshot of " + project.image.alt}
-				class="block object-left-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip dark:ring-mirage ring-2 md:ring-4 shadow-award"
+				class="block object-left-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip dark:ring-mirage ring-2 md:ring-4 shadow-award "
 				loading="lazy"
 				title={project.image.alt}
-				width={large ? 612 : 223}
-				height={large ? 298 : 164}
+				width={large ? 930 : 223}
+				height={large ? 496 : 164}
 			/>
 		) : (
 			<Picture
 				src={project.image.url}
 				formats={["webp"]}
-				widths={[128, 156, 170, 232, 298, 317, 327, 403, 604, 612, 930]}
+				widths={[128, 156, 170, 232, 298, 317, 327, 403, 604, 930]}
 				alt={"screenshot of " + project.image.alt}
 				class="block object-top w-full h-full rounded-lg lg:rounded-l-lg object-fit dark:brightness-50 dark:hover:brightness-100 ring-tulip dark:ring-mirage ring-2 md:ring-4 shadow-award"
 				loading="lazy"
 				title={project.image.alt}
-				width={large ? 612 : 223}
-				height={large ? 298 : 164}
+				width={large ? 930 : 223}
+				height={large ? 496 : 164}
 			/>
 		)
 	}
