@@ -45,14 +45,14 @@ const { project, large } = Astro.props;
 			title={project.winnerLabel}
 			target="_blank"
 			rel="noopener"
-			class="text-black hover:text-black"
+			class="text-black hover:text-black dark:text-cool"
 		>
 			<span class="font-bold">{project.winnerLabel}</span><br>
 			<span>
 				{project.title}
 			</span>
 			<br>
-			<span class="hidden md:inline-block italic">{project.winnerDescription}</span>
+			<span class="hidden md:inline-block">{project.winnerDescription}</span>
 		</a>
 	</figcaption>
 </figure>
