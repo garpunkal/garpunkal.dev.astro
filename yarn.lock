@@ -2299,7 +2299,6 @@ __metadata:
     astro-google-fonts-optimizer: "npm:^0.2.2"
     astro-robots-txt: "npm:^1.0.0"
     humanize-duration: "npm:^3.31.0"
-    simple-icons: "npm:^10.1.0"
     tailwindcss: "npm:^3.3.5"
     typescript: "npm:^5.2.2"
   languageName: unknown
@@ -4805,13 +4804,6 @@ __metadata:
     once: "npm:^1.3.1"
     simple-concat: "npm:^1.0.0"
   checksum: b0649a581dbca741babb960423248899203165769747142033479a7dc5e77d7b0fced0253c731cd57cf21e31e4d77c9157c3069f4448d558ebc96cf9e1eebcf0
-  languageName: node
-  linkType: hard
-
-"simple-icons@npm:^10.1.0":
-  version: 10.1.0
-  resolution: "simple-icons@npm:10.1.0"
-  checksum: 332a77c87107d912746f774693248bbd4f4f35f70ce4aa89e0ff8820a43d7cf0d9510c937e8ccb3d6135e4d54a4be65f33948dfc4bc30a1762f2b7d59810a264
   languageName: node
   linkType: hard
 

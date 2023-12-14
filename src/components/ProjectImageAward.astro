@@ -40,12 +40,19 @@ const { project, large } = Astro.props;
 	<figcaption
 		class="absolute bottom-0 left-0 px-2 py-1 text-xs text-black rounded-tr-lg rounded-bl-lg md:-left-1 md:-bottom-1 md:px-4 md:py-2 bg-tulip dark:bg-mirage dark:text-cool"
 	>
-		<a href={project.winnerUrl} title={project.winnerLabel} target="_blank" rel="noopener" class="text-black">
-			<div class="font-bold">{project.winnerLabel}</div>
-			<div>
+		<a
+			href={project.winnerUrl}
+			title={project.winnerLabel}
+			target="_blank"
+			rel="noopener"
+			class="text-black hover:text-black"
+		>
+			<span class="font-bold">{project.winnerLabel}</span><br>
+			<span>
 				{project.title}
-			</div>
-			<div class="hidden md:inline-block">{project.winnerDescription}</div>
+			</span>
+			<br>
+			<span class="hidden md:inline-block italic">{project.winnerDescription}</span>
 		</a>
 	</figcaption>
 </figure>
