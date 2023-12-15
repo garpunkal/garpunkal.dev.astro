@@ -10,8 +10,10 @@ const { experience } = Astro.props;
 ---
 
 <div class="flex flex-row flex-wrap w-full">
+	
+	<div class="w-full inline-flex dark:brightness-50 dark:hover:brightness-100">
 	<div
-		class="flex justify-center w-full rounded-t-lg dark:brightness-50 dark:hover:brightness-100"
+		class="flex justify-center w-full rounded-t-lg"
 		style={"background-color:" + experience.logo.background + ";background-size:auto;"}
 	>
 		{
@@ -70,6 +72,7 @@ const { experience } = Astro.props;
 			}
 		</div>
 	</div>
+</div>
 	<div class="w-full h-full mt-2">
 		<h3 class="mb-1 text-lg font-bold text-white dark:text-cool">
 			{experience.job}
