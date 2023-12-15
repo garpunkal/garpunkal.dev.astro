@@ -15,10 +15,10 @@ const { home, articles } = Astro.props;
 	<div class="container px-5 py-5 mx-auto md:py-14">
 		<a class="w-full" href="https://dev.to/garpunkal" target="_blank" rel="noopener" title="dev.to">
 			<h3
-			class="w-full mt-10 mb-20 text-3xl font-extrabold tracking-tighter text-center md:text-left text-cool md:text-6xl dark:text-pale lg:mt-0"
+			class="w-full mt-8 mb-10 text-3xl font-extrabold tracking-tighter text-center md:text-left text-cool md:text-6xl dark:text-pale lg:mt-0"
 		>
-				{home.articlesLabel}
-			</h3> 
+			{home.articlesLabel}
+		</h3>
 		</a>
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 			{
@@ -30,7 +30,7 @@ const { home, articles } = Astro.props;
 			}
 		</div>
 		<div class="lg:mx-14">
-			<div class="grid grid-cols-1 gap-4 mt-10 md:grid-cols-2">
+			<div class="grid grid-cols-1 gap-4 mt-10 lg:grid-cols-2">
 				{articles.slice(3, 11).map((article: Article) => <ArticleNano article={article} />)}
 			</div>
 		</div>
