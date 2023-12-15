@@ -7,6 +7,7 @@ interface Props {
 
 const { article } = Astro.props;
 ---
+
 <div>
 	<div>
 		<div class="grid grid-cols-12 gap-2 mb-5 md:mb-0">
@@ -38,7 +39,7 @@ const { article } = Astro.props;
 				title={article.title}
 				class="flex items-center w-full col-span-8 pr-4"
 			>
-				<h2 class="text-sm font-medium text-white  dark:text-cool">
+				<h2 class="text-sm font-medium text-white dark:text-cool">
 					{article.title}
 				</h2>
 			</a>
