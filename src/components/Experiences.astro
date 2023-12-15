@@ -17,11 +17,11 @@ const sortedExperiences = experiences
 <section class="bg-mirage dark:bg-gray-900 body-font" id="experience">
 	<div class="container px-5 py-5 mx-auto md:py-14">
 		<h3
-			class="w-full mt-10 mb-20 text-3xl font-extrabold tracking-tighter text-center text-cool sm:text-65xl lg:text-4xl dark:text-pale lg:mt-0"
+			class="w-full mt-10 mb-20 text-3xl font-extrabold tracking-tighter text-center md:text-left text-cool md:text-6xl dark:text-pale lg:mt-0"
 		>
 			{home.experiencesLabel}
 		</h3>
-		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-4">
 			{sortedExperiences.map((experience: Experience) => <ExperienceItem experience={experience} />)}
 		</div>
 	</div>

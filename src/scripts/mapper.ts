@@ -31,7 +31,8 @@ export function MapProject(item: any) {
 		new Image(
 			"https://cloud.squidex.io/api/assets/garpunkaldev/" + item.data.image + "?cache=31536000",
 			"",
-			item.data.title
+			item.data.title,
+			""
 		),
 		item.data.SortOrder ?? 0,
 		GetBool(item.data.IsHighlight),
@@ -51,7 +52,8 @@ export function MapExperience(item: any, company: any, projects: Project[], cont
 		new Image(
 			"https://cloud.squidex.io/api/assets/garpunkaldev/" + company.data.logo + "?cache=31536000",
 			company.data.logoBackgroundColour,
-			company.data.title
+			company.data.title,
+			company.data.logoForegroundColour,
 		),
 		company.data.url,
 		company.data.shortUrl,
@@ -75,7 +77,8 @@ export function MapHome(item: any) {
 		new Image(
 			"https://cloud.squidex.io/api/assets/garpunkaldev/" + item.data.profileImage + "?cache=31536000",
 			"",
-			item.data.title
+			item.data.title,
+			""
 		),
 		MapLink(item.data.githubSource),
 		item.data.specialisms.map((p: any) => MapLink(p)),
