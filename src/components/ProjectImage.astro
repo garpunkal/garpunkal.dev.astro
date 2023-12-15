@@ -8,7 +8,7 @@ interface Props {
 
 const { project, large } = Astro.props;
 ---
-<figure class="relative ring-ocean dark:ring-mirage ring-4 rounded-lg">
+<figure class="relative">
 	{
 		project.position === "left top" ? (
 			<Picture
@@ -16,7 +16,7 @@ const { project, large } = Astro.props;
 				formats={["webp"]}
 				widths={[128, 156, 170, 232, 298, 317, 327, 403, 604, 930]}
 				alt={"screenshot of " + project.image.alt}
-				class="block object-left-top w-full h-full object-cover dark:brightness-50 dark:hover:brightness-100 rounded-lg"
+				class="block object-left-top w-full h-full object-cover dark:brightness-50 dark:hover:brightness-100 rounded-lg "
 				loading="lazy"
 				title={project.image.alt}
 				width={large ? 930 : 223}
@@ -37,7 +37,7 @@ const { project, large } = Astro.props;
 		)
 	}
 	<figcaption
-		class="absolute px-2 py-1 text-white -left-1 -bottom-1 md:px-4 md:py-2 bg-ocean dark:bg-mirage dark:text-cool rounded-bl-lg rounded-tr-lg text-sm "
+		class="absolute px-2 py-1 text-white left-0 bottom-0 md:px-4 md:py-2 bg-ocean dark:bg-mirage dark:text-cool rounded-bl-lg rounded-tr-lg text-sm "
 	>
 		{project.title}
 	</figcaption>
