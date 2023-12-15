@@ -13,9 +13,9 @@ const { image } = Astro.props;
 		<Picture
 			src={image.url}
 			formats={["webp"]}
-			widths={[192, 461]}
+			widths={[192, 461, 690]}
 			alt={image.alt}
-			class="object-cover w-full h-full rounded-full lg:rounded-lg lg:block dark:brightness-50 dark:hover:brightness-100 ring-mirage dark:ring-ocean ring-4 filter-grayscale lg:shadow-2xl-black"
+			class="object-cover w-full h-full rounded-full lg:rounded-lg lg:block dark:brightness-50 dark:hover:brightness-100 filter-grayscale lg:shadow-2xl-black"
 			width="690"
 			height="690"
 			loading="eager"
