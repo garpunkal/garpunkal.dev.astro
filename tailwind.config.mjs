@@ -60,8 +60,8 @@ module.exports = {
 			boxShadow: {
 				"xl-black": '0 10px 10px -12px rgba(0, 0, 0, 5)',
 				"2xl-black": '0 25px 50px -12px rgba(0, 0, 0, 5)',
-				"2xl-tulip": '10px 10px 50px -20px rgba(231, 166, 26, 1)',
-				"2xl-ocean": '10px 10px 50px -20px rgba(7, 125, 160, 1)',
+				"3xl-tulip": '10px 10px 50px -20px rgba(231, 166, 26, 1)',
+				"3xl-ocean": '10px 10px 50px -20px rgba(7, 125, 160, 1)',
 			}
 		}  
 	},
