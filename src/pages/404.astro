@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Modal from "../components/Modal.astro";
 ---
-
-<Layout title="404 File Not Found - garpunkal.dev">
-	<main>
-		<Modal title="404" subTitle="File Not Found" url="/" urlTitle="Homepage" urlText="back to homepage" />
-	</main>
+<Layout title="404 File Not Found - garpunkal.dev" header={false}>
+	<section class="text-pale bg-mirage dark:text-iron dark:bg-gray-900 body-font">
+		<div class="container px-5 py-5 mx-auto md:py-14">
+			<Modal title="404" subTitle="File Not Found" url="/" urlTitle="Homepage" urlText="back to homepage" />
+		</div>
+	</section>
 </Layout>
