@@ -19,21 +19,19 @@ const { article, cssClass } = Astro.props;
 			title={article.title}
 			aria-label={"read more on " + article.title}
 		>
-			<div class="center">
-				<figure class="relative" role="none">
-					<Picture
-						src={article.cover_image}
-						formats={["webp"]}
-						widths={[98, 105, 172, 317, 335, 403]}
-						alt={"screenshot of " + article.title}
-						class="rounded-t-lg dark:brightness-75 dark:hover:brightness-100"
-						loading="lazy"
-						title={article.title}
-						width="404"
-						height="170"
-					/>
-				</figure>
-			</div>
+			<figure class="relative" role="none">
+				<Picture
+					src={article.cover_image}
+					formats={["webp"]}
+					widths={[98, 105, 172, 317, 335, 403]}
+					alt={"screenshot of " + article.title}
+					class="rounded-t-lg dark:brightness-75 dark:hover:brightness-100"
+					loading="lazy"
+					title={article.title}
+					width="404"
+					height="170"
+				/>
+			</figure>
 			<div class="px-6 pt-6">
 				<h2 class="mb-3 text-lg font-bold text-white dark:text-cool min-h-56">
 					{article.title}
