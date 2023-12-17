@@ -10,28 +10,13 @@ const { experience } = Astro.props;
 ---
 
 <div
-	class="flex flex-row flex-wrap w-full py-4 px-4 rounded-lg dark:brightness-75 dark:hover:brightness-100 "
+	class="flex flex-row flex-wrap w-full py-4 px-4 rounded-lg dark:brightness-75 dark:hover:brightness-100"
 	style={"background-color:" + experience.logo.background + ";background-size:auto;"}
 >
-	<div class="w-full h-100pixel inline-block justify-center">
-		<div class="flex justify-center w-full h-full">
-			{
-				experience.url ? (
-					<a href={experience.url} target="_blank" rel="noopener" title={experience.title}>
-						<Picture
-							src={experience.logo.url}
-							formats={["webp"]}
-							widths={[100]}
-							alt={experience.logo.alt}
-							class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel"
-							loading="lazy"
-					
-							width="100"
-							height="100"
-							style={"backgroundColor:" + experience.logo.background}
-						/>
-					</a>
-				) : (
+	<div class="w-full h-100pixel flex justify-center">
+		{
+			experience.url ? (
+				<a href={experience.url} target="_blank" rel="noopener" title={experience.title}>
 					<Picture
 						src={experience.logo.url}
 						formats={["webp"]}
@@ -39,40 +24,49 @@ const { experience } = Astro.props;
 						alt={experience.logo.alt}
 						class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel"
 						loading="lazy"
-					
 						width="100"
 						height="100"
 						style={"backgroundColor:" + experience.logo.background}
 					/>
-				)
-			}
-		</div>
+				</a>
+			) : (
+				<Picture
+					src={experience.logo.url}
+					formats={["webp"]}
+					widths={[100]}
+					alt={experience.logo.alt}
+					class="flex object-contain rounded-lg lg:rounded-l-lg w-100pixel h-100pixel"
+					loading="lazy"
+					width="100"
+					height="100"
+					style={"backgroundColor:" + experience.logo.background}
+				/>
+			)
+		}
 	</div>
 
+	<div class="w-full mt-2 text-center">
+		<h3 class="text-lg font-bold" style={"color:" + experience.logo.foreground}>
+			{experience.job}
+		</h3>
+		<h4 class="mb-1 text-sm" style={"color:" + experience.logo.foreground}>
+			{experience.title}
+		</h4>
+	</div>
 
-		<div class="w-full mt-2 text-center">
-			<h3 class="text-lg font-bold" style={"color:" + experience.logo.foreground}>
-				{experience.job}
-			</h3>
-			<h4 class="mb-1 text-sm" style={"color:" + experience.logo.foreground}>
-				{experience.title}
-			</h4>
+	<div class="w-full py-2 rounded-b-lg text-sm text-center opacity-75" style={"color:" + experience.logo.foreground}>
+		<div class="uppercase">
+			{experience.isCurrent ? <span>CURRENT</span> : <span>{GetMonthYear(experience.to)}</span>}
+			 -
+			{GetMonthYear(experience.from)}
 		</div>
 
-		<div class="w-full py-2 rounded-b-lg text-sm text-center opacity-75" style={"color:" + experience.logo.foreground}>
-			<div class="uppercase">
-				{experience.isCurrent ? <span>CURRENT</span> : <span>{GetMonthYear(experience.to)}</span>}
-				 -
-				{GetMonthYear(experience.from)}
-			</div>
-
-			{
-				GetMonths(experience.from, experience.to) != "0 months" ? (
-					<div class="text-xs">{GetMonths(experience.from, experience.to)}</div>
-				) : (
-					<div />
-				)
-			}
-		</div>
-	   
+		{
+			GetMonths(experience.from, experience.to) != "0 months" ? (
+				<div class="text-xs">{GetMonths(experience.from, experience.to)}</div>
+			) : (
+				<div />
+			)
+		}
+	</div>
 </div>
