@@ -12,7 +12,13 @@ const { article, cssClass } = Astro.props;
 
 <div class={cssClass}>
 	<div class="flex-1">
-		<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
+		<a
+			href={article.canonical_url}
+			target="_blank"
+			rel="noopener"
+			title={article.title}
+			aria-label={"read more on " + article.title}
+		>
 			<div class="center">
 				<figure class="relative" role="none">
 					<Picture

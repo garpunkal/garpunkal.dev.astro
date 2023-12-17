@@ -9,7 +9,14 @@ const { article } = Astro.props;
 ---
 
 <>
-	<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title} class="flex flex-row flex-wrap">
+	<a
+		href={article.canonical_url}
+		target="_blank"
+		rel="noopener"
+		title={article.title}
+		class="flex flex-row flex-wrap"
+		aria-label={"read more on " + article.title}
+	>
 		<figure class="flex w-2/6" role="none">
 			<Picture
 				src={article.cover_image}
