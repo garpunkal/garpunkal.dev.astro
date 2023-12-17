@@ -9,10 +9,11 @@ interface Props {
 
 const { article, cssClass } = Astro.props;
 ---
+
 <div class={cssClass}>
 	<div class="flex-1">
-		<div class="center">
-			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
+		<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
+			<div class="center">
 				<figure class="relative">
 					<Picture
 						src={article.cover_image}
@@ -26,17 +27,17 @@ const { article, cssClass } = Astro.props;
 						height="170"
 					/>
 				</figure>
-			</a>
-		</div>
-		<div class="p-6">
-			<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title}>
+			</div>
+			<div class="px-6 pt-6">
 				<h2 class="mb-3 text-lg font-bold text-white dark:text-cool min-h-56">
 					{article.title}
 				</h2>
-			</a>
-			<p class="mb-3 leading-relaxed text-iron dark:text-cool">
-				{article.description}
-			</p>
+				<p class="mb-3 leading-relaxed text-iron dark:text-cool">
+					{article.description}
+				</p>
+			</div>
+		</a>
+		<div class="p-6">
 			{article.tag_list.map((tag: string) => <Tag tag={tag} />)}
 		</div>
 	</div>
