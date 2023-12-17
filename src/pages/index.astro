@@ -16,13 +16,17 @@ const articles = await GetArticles();
 ---
 
 <Layout title="Gareth Wright - garpunkal.dev">
-	<main>
+	<header>
 		<Header home={home} />
+	</header>
+	<main id="main">
 		<Projects home={home} projects={projects} />
 		<Articles home={home} articles={articles} />
 		<Experiences home={home} experiences={experiences} />
-		<Footer home={home} />
 	</main>
+	<footer>
+		<Footer home={home} />
+	</footer>
 </Layout>
 
 <script>
@@ -34,7 +38,7 @@ const articles = await GetArticles();
 			});
 		});
 	});
-	
+
 	document.querySelectorAll('a[href^="#top"]').forEach((anchor) => {
 		anchor.addEventListener("click", function (e) {
 			e.preventDefault();
