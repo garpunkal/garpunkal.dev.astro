@@ -21,7 +21,7 @@ const { experience } = Astro.props;
 					target="_blank"
 					rel="noopener"
 					title={experience.title}
-					aria-label={"read more about " + experience.title}
+					aria-label={experience.title}
 				>
 					<Picture
 						src={experience.logo.url}

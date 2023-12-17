@@ -15,7 +15,7 @@ const { article } = Astro.props;
 		rel="noopener"
 		title={article.title}
 		class="flex flex-row flex-wrap"
-		aria-label={"read more on " + article.title}
+		aria-label={article.title}
 	>
 		<figure class="flex w-2/6" role="none">
 			<Picture

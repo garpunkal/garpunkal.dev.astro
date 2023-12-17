@@ -30,7 +30,7 @@ const { title, svgPath, strokeWidth, stroke, fill, cssclass, url } = Astro.props
 		</svg>
 		{
 			url ? (
-				<a href={url} target="_blank" rel="noopener" class="text-vampire dark:text-iron" aria-label={'read more about '+title }>
+				<a href={url} target="_blank" rel="noopener" class="text-vampire dark:text-iron" aria-label={title}>
 					<span class="flex-shrink pl-1">{title}</span>
 				</a>
 			) : (
