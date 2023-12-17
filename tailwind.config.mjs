@@ -55,7 +55,8 @@ module.exports = {
 			}),
 			height: (theme) => ({			
 				"144": "40rem",
-				"100pixel": "100px"
+				"100pixel": "100px",
+				"screen/3": "75vh",
 			}),
 			boxShadow: {
 				"xl-black": '0 10px 10px -12px rgba(0, 0, 0, 5)',
