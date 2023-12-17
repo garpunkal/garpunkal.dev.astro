@@ -7,10 +7,11 @@ interface Props {
 
 const { link } = Astro.props;
 ---
+
 <a
 	href={link.url}
-
 	target="_blank"
 	rel="noopener"
-	class="text-white hover:text-mirage dark:text-pale">{link.title}</a
+	class="text-white hover:text-mirage dark:text-pale"
+	aria-label={"read more about " + link.title}>{link.title}</a
 >
