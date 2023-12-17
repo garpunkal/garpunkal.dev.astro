@@ -17,7 +17,8 @@ const { href, title, svgPath, strokeWidth, stroke, fill, cssclass, rel } = Astro
 	href={href}
 	target="_blank"
 	rel={"noopener " + (rel || "")}
->
+	aria-label={'read more on ' + title}
+	>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class={cssclass ||
