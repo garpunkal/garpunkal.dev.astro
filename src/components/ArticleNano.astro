@@ -10,7 +10,7 @@ const { article } = Astro.props;
 
 <>
 	<a href={article.canonical_url} target="_blank" rel="noopener" title={article.title} class="flex flex-row flex-wrap">
-		<figure class="flex w-2/6">
+		<figure class="flex w-2/6" role="none">
 			<Picture
 				src={article.cover_image}
 				formats={["webp"]}

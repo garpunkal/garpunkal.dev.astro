@@ -9,7 +9,7 @@ interface Props {
 const { project, large } = Astro.props;
 ---
 
-<figure class="relative rounded-lg">
+<figure class="relative rounded-lg" role="none">
 	{
 		project.position === "left top" ? (
 			<Picture
