@@ -18,7 +18,7 @@ const { project, large } = Astro.props;
 				alt={"screenshot of " + project.image.alt}
 				class="block object-left-top w-full h-full object-cover dark:brightness-75 dark:hover:brightness-100 rounded-lg "
 				loading="lazy"
-				title={project.image.alt}
+				title={project.title}
 				width={large ? 930 : 223}
 				height={large ? 496 : 164}
 			/>
@@ -30,7 +30,7 @@ const { project, large } = Astro.props;
 				alt={"screenshot of " + project.image.alt}
 				class="block object-top w-full h-full object-fit dark:brightness-75 dark:hover:brightness-100 rounded-lg"
 				loading="lazy"
-				title={project.image.alt}
+				title={project.title}
 				width={large ? 930 : 223}
 				height={large ? 496 : 164}
 			/>
