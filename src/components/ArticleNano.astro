@@ -8,41 +8,32 @@ interface Props {
 const { article } = Astro.props;
 ---
 
-<div>
-	<div>
-		<div class="grid grid-cols-12 gap-2 mb-5 md:mb-0">
-			<a
-				href={article.canonical_url}
-				target="_blank"
-				rel="noopener"
+<>
+	<a
+		href={article.canonical_url}
+		target="_blank"
+		rel="noopener"
+		title={article.title}
+		class="flex flex-row flex-wrap"
+	
+	>
+		<figure class="flex w-2/6" role="none">
+			<Picture
+				src={article.cover_image}
+				formats={["webp"]}
+				widths={[98, 105, 172, 317, 335, 403]}
+				alt={"screenshot of " + article.title}
+				class="block object-left-top w-full h-auto border-4 rounded-lg lg:rounded-l-lg object-fit dark:brightness-75 dark:hover:brightness-100"
+				loading="lazy"
 				title={article.title}
-				class="w-full h-full col-span-4"
-			>
-				<figure class="relative">
-					<Picture
-						src={article.cover_image}
-						formats={["webp"]}
-						widths={[98, 105, 172, 317, 335, 403]}
-						alt={article.title}
-						class="block object-left-top w-full h-auto border-4 rounded-lg lg:rounded-l-lg object-fit dark:brightness-75 dark:hover:brightness-100"
-						loading="lazy"
-						title={article.title}
-						width="172"
-						height="72"
-					/>
-				</figure>
-			</a>
-			<a
-				href={article.canonical_url}
-				target="_blank"
-				rel="noopener"
-				title={article.title}
-				class="flex items-center w-full col-span-8 pr-4"
-			>
-				<h2 class="text-sm font-medium text-white dark:text-cool">
-					{article.title}
-				</h2>
-			</a>
+				width="172"
+				height="72"
+			/>
+		</figure>
+		<div class="flex items-center w-4/6 px-2 md:px-4">
+			<h2 class="text-sm font-medium text-white dark:text-cool">
+				{article.title}
+			</h2>
 		</div>
-	</div>
-</div>
+	</a>
+</>

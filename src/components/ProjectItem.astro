@@ -11,19 +11,30 @@ interface Props {
 
 const { project, large, cssClass } = Astro.props;
 ---
+
 <div class={"center " + cssClass}>
 	{
 		project.url ? (
 			project.isWinner ? (
-				<a href={project.url} title={project.title} target="_blank" rel="noopener">
+				<a
+					href={project.url}
+					title={project.title}
+					target="_blank"
+					rel="noopener"			
+				>
 					<ProjectImageAward project={project} large={large} />
 				</a>
 			) : (
-				<a href={project.url} title={project.title} target="_blank" rel="noopener">
+				<a
+					href={project.url}
+					title={project.title}
+					target="_blank"
+					rel="noopener"	 			
+				>
 					<ProjectImage project={project} large={large} />
 				</a>
 			)
-		) : (			
+		) : (
 			<ProjectImage project={project} large={large} />
 		)
 	}

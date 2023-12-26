@@ -6,7 +6,7 @@ interface Props {
 const { anchor } = Astro.props;
 ---
 
-<a href={"#" + anchor} title="down">
+<a href={"#" + anchor} title="scroll to projects" role="button" aria-label="scroll to projects" id="downArrow">
 	<svg
 		class="w-6 h-6 animate-bounce text-white dark:text-iron"
 		fill="none"
@@ -17,6 +17,8 @@ const { anchor } = Astro.props;
 		stroke="currentColor"
 		width="24px"
 		height="100%"
+		role="img"
+		aria-labelledby="downArrow"
 	>
 		<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
 	</svg>

@@ -1,10 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import Projects from "../components/Projects.astro";
 import Articles from "../components/Articles.astro";
 import Experiences from "../components/Experiences.astro";
-import Footer from "../components/Footer.astro";
 
 import { GetExperiences, GetProjects, GetHome } from "../scripts/squidex.ts";
 import { GetArticles } from "../scripts/devto.ts";
@@ -15,14 +13,10 @@ const home = await GetHome();
 const articles = await GetArticles();
 ---
 
-<Layout title="Gareth Wright - garpunkal.dev">
-	<main>
-		<Header home={home} />
-		<Projects home={home} projects={projects} />
-		<Articles home={home} articles={articles} />
-		<Experiences home={home} experiences={experiences} />
-		<Footer home={home} />
-	</main>
+<Layout title="Gareth Wright - garpunkal.dev" header={true}>
+	<Projects home={home} projects={projects} />
+	<Articles home={home} articles={articles} />
+	<Experiences home={home} experiences={experiences} />
 </Layout>
 
 <script>
@@ -34,7 +28,7 @@ const articles = await GetArticles();
 			});
 		});
 	});
-	
+
 	document.querySelectorAll('a[href^="#top"]').forEach((anchor) => {
 		anchor.addEventListener("click", function (e) {
 			e.preventDefault();

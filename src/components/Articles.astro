@@ -13,12 +13,10 @@ const { home, articles } = Astro.props;
 ---
 <section class="bg-mirage dark:bg-gray-900 body-font" id="content">
 	<div class="container px-5 py-5 mx-auto md:py-14">
-		<a class="w-full" href="https://dev.to/garpunkal" target="_blank" rel="noopener" title="dev.to">
+		<a class="w-full" href="https://dev.to/garpunkal" target="_blank" rel="noopener" title="Articles" aria-label="Articles">
 			<h3
 			class="w-full mt-8 mb-10 text-3xl font-extrabold tracking-tighter text-center md:text-left text-cool md:text-6xl dark:text-pale lg:mt-0"
-		>
-			{home.articlesLabel}
-		</h3>
+		>{home.articlesLabel}</h3>
 		</a>
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 			{

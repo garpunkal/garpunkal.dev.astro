@@ -9,7 +9,7 @@ interface Props {
 const { project, large } = Astro.props;
 ---
 
-<figure class="relative rounded-lg">
+<figure class="relative rounded-lg" role="none">
 	{
 		project.position === "left top" ? (
 			<Picture
@@ -38,21 +38,13 @@ const { project, large } = Astro.props;
 		)
 	}
 	<figcaption
-		class="absolute px-2 py-1 text-white left-0 bottom-0 md:px-4 md:py-2 bg-tulip dark:bg-mirage dark:text-cool rounded-bl-lg rounded-tr-lg text-sm"
+		class="absolute px-2 py-1 text-black left-0 bottom-0 md:px-4 md:py-2 bg-tulip dark:bg-mirage rounded-bl-lg rounded-tr-lg text-sm hover:text-black dark:text-cool"
 	>
-		<a
-			href={project.winnerUrl}
-			title={project.winnerLabel}
-			target="_blank"
-			rel="noopener"
-			class="text-black hover:text-black dark:text-cool"
-		>
+		
 			<span class="font-bold hidden lg:block">{project.winnerLabel}</span>
-			<span>
-				{project.title}
-			</span>
+			<span>{project.title}</span>
 			<span class="hidden lg:block">{project.winnerDescription}</span>
-		</a>
+	
 	</figcaption>
 </figure>
  
