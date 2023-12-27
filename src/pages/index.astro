@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Profile from "../components/Profile.astro";
 import Projects from "../components/Projects.astro";
 import Articles from "../components/Articles.astro";
 import Experiences from "../components/Experiences.astro";
@@ -13,7 +14,8 @@ const home = await GetHome();
 const articles = await GetArticles();
 ---
 
-<Layout title="Gareth Wright - garpunkal.dev" header={true}>
+<Layout title="Gareth Wright - garpunkal.dev">
+	<Profile home={home} />
 	<Projects home={home} projects={projects} />
 	<Articles home={home} articles={articles} />
 	<Experiences home={home} experiences={experiences} />

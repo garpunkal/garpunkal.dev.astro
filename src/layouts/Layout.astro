@@ -10,10 +10,9 @@ const home = await GetHome();
 
 interface Props {
 	title: string;
-	header: boolean;
 }
 
-const { title, header } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -76,11 +75,9 @@ const { title, header } = Astro.props;
 	<body>
 		<a href="#main" class="skip-to-main-content-link">Skip to main content</a>
 		<header>
-			{
-				(header) ? ( <Header home={home}  /> ) : ""
-			}
+			<Header home={home}  /> 
 		</header>
-		<main id="main">
+		<main id="main" class="mt-30">
 			<slot />
 		</main>
 		<footer>
