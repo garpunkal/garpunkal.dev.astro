@@ -11,26 +11,40 @@ interface Props {
 
 const { home, articles } = Astro.props;
 ---
+
 <section class="bg-mirage dark:bg-gray-900 body-font" id="content">
 	<div class="container px-5 py-5 mx-auto md:py-14">
-		<a class="w-full" href="https://dev.to/garpunkal" target="_blank" rel="noopener" title="Articles" aria-label="Articles">
+		<a
+			class="w-full"
+			href="https://dev.to/garpunkal"
+			target="_blank"
+			rel="noopener"
+			title="Articles"
+			aria-label="Articles"
+		>
 			<h3
-			class="w-full mt-8 mb-10 text-3xl font-extrabold tracking-tighter text-center md:text-left text-cool md:text-6xl dark:text-pale lg:mt-0"
-		>{home.articlesLabel}</h3>
+				class="w-full mt-8 mb-10 text-3xl font-extrabold tracking-tighter text-center md:text-left text-cool md:text-6xl dark:text-pale lg:mt-0"
+			>
+				{home.articlesLabel}
+			</h3>
 		</a>
-		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+		<div class="flex flex-row flex-wrap -m-1 md:-m-2">
 			{
-				articles
-					.slice(0, 3)
-					.map((article: Article) => (
+				articles.slice(0, 3).map((article: Article) => (
+					<div class="flex flex-wrap w-full md:w-1/3 p-2">
 						<ArticleItem article={article} cssClass="h-full rounded-lg bg-elephant dark:bg-elephant" />
-					))
+					</div>
+				))
 			}
 		</div>
-		<div class="lg:mx-14">
-			<div class="grid grid-cols-1 gap-4 mt-10 lg:grid-cols-2">
-				{articles.slice(3, 11).map((article: Article) => <ArticleNano article={article} />)}
-			</div>
+		<div class="flex flex-row flex-wrap lg:mx-14 mt-6">
+			{
+				articles.slice(3, 11).map((article: Article) => (
+					<div class="flex flex-wrap w-full md:w-1/2 p-2">
+						<ArticleNano article={article} />
+					</div>
+				))
+			}
 		</div>
 	</div>
 </section>

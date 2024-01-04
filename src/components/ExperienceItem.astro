@@ -62,7 +62,7 @@ const { experience } = Astro.props;
 
 	<div class="w-full py-2 rounded-b-lg text-sm text-center opacity-75" style={"color:" + experience.logo.foreground}>
 		<div class="uppercase">
-			{experience.isCurrent ? <span>CURRENT</span> : <span>{GetMonthYear(experience.to)}</span>}
+			{experience.isCurrent ? <span class="font-bold">CURRENT</span> : <span>{GetMonthYear(experience.to)}</span>}
 			 -
 			{GetMonthYear(experience.from)}
 		</div>
