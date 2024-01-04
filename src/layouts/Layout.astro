@@ -2,7 +2,7 @@
 import "../styles/main.css";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 
-import Header from "../components/Header.astro";
+import Profile from "../components/Profile.astro";
 import Footer from "../components/Footer.astro";
 import { GetHome } from "../scripts/squidex.ts";
 
@@ -77,7 +77,7 @@ const { title, header } = Astro.props;
 		<a href="#main" class="skip-to-main-content-link">Skip to main content</a>
 		<header>
 			{
-				(header) ? ( <Header home={home}  /> ) : ""
+				(header) ? ( <Profile home={home}  /> ) : ""
 			}
 		</header>
 		<main id="main">
