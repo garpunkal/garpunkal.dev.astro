@@ -103,6 +103,7 @@ export function MapLink(item: any) {
 		item.svgStrokeLineCap,
 		item.svgStrokeLineJoin,
 		item.rel,
-		GetBool(item.displayComponent)
+		GetBool(item.displayComponent),
+		item.viewBox
 	);
 }

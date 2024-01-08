@@ -1,7 +1,7 @@
 ---
 import DownArrow from "./DownArrow.astro";
 import ProfileImage from "./ProfileImage.astro";
-import SocialLink from "./SocialLink.astro";
+import SvgLink from "./SvgLink.astro";
 import Bullet from "./Bullet.astro";
 import { Home } from "../scripts/models/home";
 
@@ -60,7 +60,7 @@ const { home } = Astro.props;
 					home.socials
 						.filter((x) => x.displayComponent)
 						.map((social) => (
-							<SocialLink href={social.url} title={social.title} svgPath={social.svgPath} rel={social.rel} />
+							<SvgLink href={social.url} title={social.title} svgPath={social.svgPath} rel={social.rel} />
 						))
 				}
 			</div>

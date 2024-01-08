@@ -11,6 +11,7 @@ export class Link {
     svgStrokeLineJoin: string;
     rel: string;
     displayComponent: boolean;
+    viewBox: string;
 
     constructor(
         title: string,
@@ -23,7 +24,8 @@ export class Link {
         svgStrokeLineCap: string,
         svgStrokeLineJoin: string,
         rel: string,
-        displayComponent: boolean
+        displayComponent: boolean,
+        viewBox: string,
     ) {
         this.title = title;
         this.url = url;
@@ -36,5 +38,6 @@ export class Link {
         this.svgStrokeLineJoin = svgStrokeLineJoin;
         this.rel = rel;
         this.displayComponent = displayComponent;
+        this.viewBox = viewBox;
     }
 }

@@ -1,55 +1,91 @@
 ---
 import UpArrow from "./UpArrow.astro";
-import FooterLink from "./FooterLink.astro";
 import { Home } from "../scripts/models/home";
+import SvgLink from "./SvgLink.astro";
 
 interface Props {
 	home: Home;
 }
-    
+
 const { home } = Astro.props;
 ---
 
-	<div class="text-cool bg-ocean dark:text-iron dark:bg-black ">
-		<div class="container flex flex-wrap px-10 py-8 mx-auto">
-			<UpArrow />  
+<div class="text-cool bg-ocean dark:text-iron dark:bg-black w-full">
+	<div class="flex flex-wrap py-8 w-full items-center flex-row">
+		<UpArrow />
 
-			{
-				home.githubSource ? (
-					<div class="flex flex-wrap justify-center w-full">
-						<a
-							href={home.githubSource.url}
-							title={home.githubSource.title}
-							target="_blank"
-							rel="noopener"
-							class="inline-flex items-center font-bold text-white hover:text-mirage dark:text-pale "
+		{
+			home.githubSource ? (
+				<div class="flex flex-wrap justify-center w-full">
+					<a
+						href={home.githubSource.url}
+						title={home.githubSource.title}
+						target="_blank"
+						rel="noopener"
+						class="inline-flex items-center font-bold text-white hover:text-mirage dark:text-pale "
+					>
+						<svg
+							class="h-4 pr-2 text-white fill-current hover:text-mirage dark:text-pale "
+							role="img"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24px"
+							height="100%"
 						>
-							<svg
-								class="h-4 pr-2 text-white fill-current hover:text-mirage dark:text-pale "
-								role="img"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-								width="24px"
-								height="100%"
-							>
-								<title>{home.githubSource.title}</title>
-								<path d={home.githubSource.svgPath} />
-							</svg>
-							{home.githubSource.title}
-						</a>
-					</div>
-				) : (
-					<div />
-				)
-			}
+							<title>{home.githubSource.title}</title>
+							<path d={home.githubSource.svgPath} />
+						</svg>
+						{home.githubSource.title}
+					</a>
+				</div>
+			) : (
+				<div />
+			)
+		}
 
-			<div class="grid w-full grid-cols-1 gap-2 m-auto mt-10 text-center lg:w-2/3 md:grid-cols-6 md:text-sm">
+		<div class="flex flex-row w-full mt-10 gap-8 text-center text-sm flex-wrap justify-center">
+			{
+				home.footerLinks.map((social) => (
+					<div class="flex flex-wrap w-10">
+						<SvgLink
+							href={social.url}
+							title={social.title}
+							svgPath={social.svgPath}
+							rel={social.rel}
+							viewBox={social.viewBox}
+							cssclass={social.cssClass + ' text-white hover:text-mirage dark:text-pale'}
+						/>
+					</div>
+				))
+			}
+			<div class="flex flex-wrap w-10">
 				<a
+					class="inline-flex justify-center link w-14 h-14 md:w-10 md:h-10"
 					href="/colours"
 					data-astro-prefetch="tap"					
-					class="text-white hover:text-mirage dark:text-pale">Colours</a
+					aria-label="colours"
+				
 				>
-				{home.footerLinks.map((footerLink) => <FooterLink link={footerLink} />)}
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="text-white hover:text-mirage dark:text-pale"
+						fill="currentColor"
+						role="img"
+						viewBox="0 0 24 24"
+						width="24"
+						height="24"
+					>
+						<title>Colours</title>
+						<path
+							fill-rule="evenodd"
+							d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 1 1-9 0V4.125Zm4.5 14.25a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z"
+							clip-rule="evenodd"></path>
+						<path
+							d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257ZM12.738 17.625l6.474-6.474a1.875 1.875 0 0 0 0-2.651L15.5 4.787a1.875 1.875 0 0 0-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375Z"
+						></path>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</div>
+</div>

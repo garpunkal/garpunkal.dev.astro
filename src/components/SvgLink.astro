@@ -8,9 +8,10 @@ interface Props {
 	fill?: string;
 	cssclass?: string;
 	rel?: string;
+	viewBox?: string
 }
 
-const { href, title, svgPath, strokeWidth, stroke, fill, cssclass, rel } = Astro.props;
+const { href, title, svgPath, strokeWidth, stroke, fill, cssclass, rel, viewBox } = Astro.props;
 ---
 <a
 	class="inline-flex justify-center link w-14 h-14 md:w-10 md:h-10"
@@ -22,14 +23,14 @@ const { href, title, svgPath, strokeWidth, stroke, fill, cssclass, rel } = Astro
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class={cssclass ||
-			"h-7 w-7 fill-current text-vampire hover:text-ocean dark:text-ocean dark:hover:text-white hover:animate-pulse"}
+			"h-9 w-9 fill-current text-vampire hover:text-ocean dark:text-ocean dark:hover:text-white hover:animate-pulse"}
 		stroke-width={strokeWidth}
 		stroke={stroke}
 		fill={fill || "currentColor"}
 		role="img"
-		viewBox="0 0 24 24"
-		width="24"
-		height="24"
+		viewBox={viewBox || "0 0 30 30"}
+		width="30"
+		height="30"
 	>
 		<title>{title}</title>
 		<path d={svgPath}></path>
