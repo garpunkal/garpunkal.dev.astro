@@ -17,7 +17,11 @@
 	}
 
 	:root {
-		@apply bg-ocean dark:bg-black scroll-smooth;
+		@apply  scroll-smooth; 
+	}
+
+	body { 
+		@apply bg-ocean dark:bg-black;
 	}
 }
 
