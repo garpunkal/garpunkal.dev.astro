@@ -22,11 +22,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/check@npm:^0.3.4":
-  version: 0.3.4
-  resolution: "@astrojs/check@npm:0.3.4"
+"@astrojs/check@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@astrojs/check@npm:0.4.1"
   dependencies:
-    "@astrojs/language-server": "npm:^2.5.5"
+    "@astrojs/language-server": "npm:^2.6.2"
     chokidar: "npm:^3.5.3"
     fast-glob: "npm:^3.3.1"
     kleur: "npm:^4.1.5"
@@ -35,14 +35,21 @@ __metadata:
     typescript: ^5.0.0
   bin:
     astro-check: dist/bin.js
-  checksum: 1aa7ee24b5f05938a63f909612a99afcabd845ba6fd44aa5ebbac8eb5765dd9afb1ebeb70d1215185e327c340edc5635e65883def75f0f5b6ae4ced1dcd3b7f9
+  checksum: ad24da109b246ffe417b84d397cdda7496a3492e3899dde4234c91b0969659703554b5e38c0aa0022543d0ae7dcb5bc04f50155a5ad2fd9c66f434d9b284e530
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^2.2.2, @astrojs/compiler@npm:^2.3.4":
+"@astrojs/compiler@npm:^2.3.4":
   version: 2.3.4
   resolution: "@astrojs/compiler@npm:2.3.4"
   checksum: 445b2faed9e7a8856126ce66477c97fc646b7cf9a259f43a060e73851ebf8b1fd31a2b8484b5c2ab0e1cc49c2cdff1c2eb5b79ca79ca28748e1fde53dab65431
+  languageName: node
+  linkType: hard
+
+"@astrojs/compiler@npm:^2.4.0":
+  version: 2.4.1
+  resolution: "@astrojs/compiler@npm:2.4.1"
+  checksum: 082c4c8e24412c7867276f26d3d925dc619c1ed283ac301357fc9912f4c1397960c93262308ca98651331f2c9e7355ea667311287e5b47ebf0f85be883944f0c
   languageName: node
   linkType: hard
 
@@ -53,26 +60,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/language-server@npm:^2.5.5":
-  version: 2.5.5
-  resolution: "@astrojs/language-server@npm:2.5.5"
+"@astrojs/language-server@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "@astrojs/language-server@npm:2.6.2"
   dependencies:
-    "@astrojs/compiler": "npm:^2.2.2"
+    "@astrojs/compiler": "npm:^2.4.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.15"
-    "@volar/kit": "npm:~1.10.9"
-    "@volar/language-core": "npm:~1.10.9"
-    "@volar/language-server": "npm:~1.10.9"
-    "@volar/language-service": "npm:~1.10.9"
-    "@volar/source-map": "npm:~1.10.9"
-    "@volar/typescript": "npm:~1.10.9"
+    "@volar/kit": "npm:~1.11.1"
+    "@volar/language-core": "npm:~1.11.1"
+    "@volar/language-server": "npm:~1.11.1"
+    "@volar/language-service": "npm:~1.11.1"
+    "@volar/source-map": "npm:~1.11.1"
+    "@volar/typescript": "npm:~1.11.1"
     fast-glob: "npm:^3.2.12"
     muggle-string: "npm:^0.3.1"
-    volar-service-css: "npm:0.0.16"
-    volar-service-emmet: "npm:0.0.16"
-    volar-service-html: "npm:0.0.16"
-    volar-service-prettier: "npm:0.0.16"
-    volar-service-typescript: "npm:0.0.16"
-    volar-service-typescript-twoslash-queries: "npm:0.0.16"
+    volar-service-css: "npm:0.0.17"
+    volar-service-emmet: "npm:0.0.17"
+    volar-service-html: "npm:0.0.17"
+    volar-service-prettier: "npm:0.0.17"
+    volar-service-typescript: "npm:0.0.17"
+    volar-service-typescript-twoslash-queries: "npm:0.0.17"
     vscode-html-languageservice: "npm:^5.1.0"
     vscode-uri: "npm:^3.0.8"
   peerDependencies:
@@ -85,7 +92,7 @@ __metadata:
       optional: true
   bin:
     astro-ls: bin/nodeServer.js
-  checksum: 8daad59f5e5236d994c3908da5bc472257961a0b2f334aeb9470290b69f2c579238630d82a7a7748ca43d571aa1573fe1887e3b137b4cec8ff1deab9fbb2b00f
+  checksum: fe9f62f02e6d320dbd49f37656f5ac8e2551f84909ee6acdcc790238b72a3dcd4582c96f6f895a6cf9a0602e83ac47f89b35b147478a8204fde5bda3269232f9
   languageName: node
   linkType: hard
 
@@ -451,15 +458,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emnapi/runtime@npm:^0.44.0":
-  version: 0.44.0
-  resolution: "@emnapi/runtime@npm:0.44.0"
-  dependencies:
-    tslib: "npm:^2.4.0"
-  checksum: 68133f288a5f413787610232c90194ab0b692b859a130866f4869483217d94f71ac3fd23aacfb428e0eb438e4882d0e04874690a1f06386b7b35ebae330e698a
-  languageName: node
-  linkType: hard
-
 "@esbuild/aix-ppc64@npm:0.19.11":
   version: 0.19.11
   resolution: "@esbuild/aix-ppc64@npm:0.19.11"
@@ -617,181 +615,6 @@ __metadata:
 "@esbuild/win32-x64@npm:0.19.11":
   version: 0.19.11
   resolution: "@esbuild/win32-x64@npm:0.19.11"
-  conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-darwin-arm64@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-darwin-arm64@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-darwin-arm64": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-darwin-arm64":
-      optional: true
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-darwin-x64@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-darwin-x64@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-darwin-x64": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-darwin-x64":
-      optional: true
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-darwin-arm64@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-darwin-arm64@npm:1.0.0"
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-darwin-x64@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-darwin-x64@npm:1.0.0"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-arm64@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-linux-arm64@npm:1.0.0"
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-arm@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-linux-arm@npm:1.0.0"
-  conditions: os=linux & cpu=arm & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-s390x@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-linux-s390x@npm:1.0.0"
-  conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-x64@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-linux-x64@npm:1.0.0"
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linuxmusl-arm64@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-linuxmusl-arm64@npm:1.0.0"
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linuxmusl-x64@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@img/sharp-libvips-linuxmusl-x64@npm:1.0.0"
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-arm64@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-linux-arm64@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-linux-arm64": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-arm64":
-      optional: true
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-arm@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-linux-arm@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-linux-arm": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-arm":
-      optional: true
-  conditions: os=linux & cpu=arm & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-s390x@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-linux-s390x@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-linux-s390x": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-s390x":
-      optional: true
-  conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-x64@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-linux-x64@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-linux-x64": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-x64":
-      optional: true
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linuxmusl-arm64@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-linuxmusl-arm64@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-linuxmusl-arm64": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-linuxmusl-arm64":
-      optional: true
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linuxmusl-x64@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-linuxmusl-x64@npm:0.33.1"
-  dependencies:
-    "@img/sharp-libvips-linuxmusl-x64": "npm:1.0.0"
-  dependenciesMeta:
-    "@img/sharp-libvips-linuxmusl-x64":
-      optional: true
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-wasm32@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-wasm32@npm:0.33.1"
-  dependencies:
-    "@emnapi/runtime": "npm:^0.44.0"
-  conditions: cpu=wasm32
-  languageName: node
-  linkType: hard
-
-"@img/sharp-win32-ia32@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-win32-ia32@npm:0.33.1"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
-"@img/sharp-win32-x64@npm:0.33.1":
-  version: 0.33.1
-  resolution: "@img/sharp-win32-x64@npm:0.33.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1143,36 +966,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/kit@npm:~1.10.9":
-  version: 1.10.10
-  resolution: "@volar/kit@npm:1.10.10"
+"@volar/kit@npm:~1.11.1":
+  version: 1.11.1
+  resolution: "@volar/kit@npm:1.11.1"
   dependencies:
-    "@volar/language-service": "npm:1.10.10"
+    "@volar/language-service": "npm:1.11.1"
     typesafe-path: "npm:^0.2.2"
     vscode-languageserver-textdocument: "npm:^1.0.11"
     vscode-uri: "npm:^3.0.8"
   peerDependencies:
     typescript: "*"
-  checksum: 38905c486560404cd6232c9ab5e23d23c925536c2b6be068a1b78f72334f3110cc52b3e3a545e5145f9a7c5887fa0a26daa5ee64b12767b72bd2ff3eeebaae57
+  checksum: 13701a3f40c9cda19159b02aa04b72f0ea8f2243a9e999a5b4789892877137b7ff64af0bd0fbc147736890342b724fde344142dbe33b6dc69befeb8dc9d1f5b2
   languageName: node
   linkType: hard
 
-"@volar/language-core@npm:1.10.10, @volar/language-core@npm:~1.10.9":
-  version: 1.10.10
-  resolution: "@volar/language-core@npm:1.10.10"
+"@volar/language-core@npm:1.11.1, @volar/language-core@npm:~1.11.1":
+  version: 1.11.1
+  resolution: "@volar/language-core@npm:1.11.1"
   dependencies:
-    "@volar/source-map": "npm:1.10.10"
-  checksum: 286f43bffd8b67230f4a66211d14bb6a15f7adbcd88342a1b2c2a2f283dae33c7aa4be62f58d8e268aee808c0ebe32cf135f76b4f4f952d542ccef2accba7efd
+    "@volar/source-map": "npm:1.11.1"
+  checksum: 92c4439e3a9ccc534c970031388c318740f6fa032283d03e136c6c8c0228f549c68a7c363af1a28252617a0dca6069e14028329ac906d5acf1912931d0cdcb69
   languageName: node
   linkType: hard
 
-"@volar/language-server@npm:~1.10.9":
-  version: 1.10.10
-  resolution: "@volar/language-server@npm:1.10.10"
+"@volar/language-server@npm:~1.11.1":
+  version: 1.11.1
+  resolution: "@volar/language-server@npm:1.11.1"
   dependencies:
-    "@volar/language-core": "npm:1.10.10"
-    "@volar/language-service": "npm:1.10.10"
-    "@volar/typescript": "npm:1.10.10"
+    "@volar/language-core": "npm:1.11.1"
+    "@volar/language-service": "npm:1.11.1"
+    "@volar/typescript": "npm:1.11.1"
     "@vscode/l10n": "npm:^0.0.16"
     path-browserify: "npm:^1.0.1"
     request-light: "npm:^0.7.0"
@@ -1180,39 +1003,39 @@ __metadata:
     vscode-languageserver-protocol: "npm:^3.17.5"
     vscode-languageserver-textdocument: "npm:^1.0.11"
     vscode-uri: "npm:^3.0.8"
-  checksum: 2863151a14fe41480b5ed1f21e1a93e9bff34f12aab72cf65de7950e1f6ada59729153535a94823d2e68ee3aa3ae8c30106c3f6db3f9d79afb37dda17e79980e
+  checksum: 39d10f64fea777f17feb89852f0241be904f102a80615c955329a6279750250a8a547a9f80eff0c1adcc8290d6823b8041d07324449f0a9d049b7724fd37a43c
   languageName: node
   linkType: hard
 
-"@volar/language-service@npm:1.10.10, @volar/language-service@npm:~1.10.9":
-  version: 1.10.10
-  resolution: "@volar/language-service@npm:1.10.10"
+"@volar/language-service@npm:1.11.1, @volar/language-service@npm:~1.11.1":
+  version: 1.11.1
+  resolution: "@volar/language-service@npm:1.11.1"
   dependencies:
-    "@volar/language-core": "npm:1.10.10"
-    "@volar/source-map": "npm:1.10.10"
+    "@volar/language-core": "npm:1.11.1"
+    "@volar/source-map": "npm:1.11.1"
     vscode-languageserver-protocol: "npm:^3.17.5"
     vscode-languageserver-textdocument: "npm:^1.0.11"
     vscode-uri: "npm:^3.0.8"
-  checksum: 392ac9f8aae58e81f1f044b939e19c57f6a97d30e9d03a27572eb9c6f326d70d0a8c0e917392e6a00abf36d3cb7b2c0975650e4dcc5ed925098a6ffe7666a757
+  checksum: 12774a28af4849406a3d9533bae8f118c14c0c4eae8b64592990d02bab4d91812a9865205750c5278127b4e9a1d56d7dff3a2f6a5b524b5af25140d36ac80f28
   languageName: node
   linkType: hard
 
-"@volar/source-map@npm:1.10.10, @volar/source-map@npm:~1.10.9":
-  version: 1.10.10
-  resolution: "@volar/source-map@npm:1.10.10"
+"@volar/source-map@npm:1.11.1, @volar/source-map@npm:~1.11.1":
+  version: 1.11.1
+  resolution: "@volar/source-map@npm:1.11.1"
   dependencies:
     muggle-string: "npm:^0.3.1"
-  checksum: 9ef9b3411ef4281c5fe0d57c04e4c54d5d1ccaaab2355359169789e2b2ee43d2f60774b43104825bbd80bbe934619437c74cfdde6f2a06bd7b499ba4f19a4c26
+  checksum: 0bfc639889802705f8036ea8b2052a95a4d691a68bc2b6744ba8b9d312d887393dd3278101180a5ee5304972899d493972a483afafd41e097968746c77d724cb
   languageName: node
   linkType: hard
 
-"@volar/typescript@npm:1.10.10, @volar/typescript@npm:~1.10.9":
-  version: 1.10.10
-  resolution: "@volar/typescript@npm:1.10.10"
+"@volar/typescript@npm:1.11.1, @volar/typescript@npm:~1.11.1":
+  version: 1.11.1
+  resolution: "@volar/typescript@npm:1.11.1"
   dependencies:
-    "@volar/language-core": "npm:1.10.10"
+    "@volar/language-core": "npm:1.11.1"
     path-browserify: "npm:^1.0.1"
-  checksum: 055bb5c377fcd7298653fa13f945046100ca3976132c6a0e779b5d8f6dec9911789e5ae8e5710479d5611002506b1735e0f9b4e7f17695fc4de39dc78d6ee7fd
+  checksum: 86fe153db3a14d8eb3632784a1d7fcbfbfb51fa5517c3878bfdd49ee8d15a83b1a09f9c589454b7396454c104d3a8e2db3a987dc99b37c33816772fc3e292bf2
   languageName: node
   linkType: hard
 
@@ -1401,9 +1224,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "astro@npm:4.1.0"
+"astro@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "astro@npm:4.1.2"
   dependencies:
     "@astrojs/compiler": "npm:^2.3.4"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -1457,7 +1280,7 @@ __metadata:
     resolve: "npm:^1.22.4"
     semver: "npm:^7.5.4"
     server-destroy: "npm:^1.0.1"
-    sharp: "npm:^0.33.1"
+    sharp: "npm:^0.32.6"
     shikiji: "npm:^0.6.13"
     string-width: "npm:^7.0.0"
     strip-ansi: "npm:^7.1.0"
@@ -1474,7 +1297,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 53cea841b739106cc600f8665194b5273d93b0185a596a60b198048ea3d12f4de8d2a4a20c5fbacaea7107baaa6c26492efc0b4fb9267fddae1709701e3e1f8e
+  checksum: 8d2c19d458675cccceaaf9c6b544d96fb88a063d12b49ec363ebd43ecb1ba516ed202218fabfcf40d9739f6d27c5fa94ed712608b53acca0a9795eb6bd358701
   languageName: node
   linkType: hard
 
@@ -2485,16 +2308,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "garpunkal.dev.astro@workspace:."
   dependencies:
-    "@astrojs/check": "npm:^0.3.4"
+    "@astrojs/check": "npm:^0.4.1"
     "@astrojs/sitemap": "npm:^3.0.4"
     "@astrojs/tailwind": "npm:^5.1.0"
     "@types/humanize-duration": "npm:^3.27.4"
-    astro: "npm:^4.1.0"
+    astro: "npm:^4.1.2"
     astro-favicons: "npm:^2.0.2"
     astro-google-fonts-optimizer: "npm:^0.2.2"
     astro-robots-txt: "npm:^1.0.0"
     humanize-duration: "npm:^3.31.0"
-    tailwindcss: "npm:^3.4.0"
+    tailwindcss: "npm:^3.4.1"
     typescript: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
@@ -4891,7 +4714,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.32.4":
+"sharp@npm:^0.32.4, sharp@npm:^0.32.6":
   version: 0.32.6
   resolution: "sharp@npm:0.32.6"
   dependencies:
@@ -4905,75 +4728,6 @@ __metadata:
     tar-fs: "npm:^3.0.4"
     tunnel-agent: "npm:^0.6.0"
   checksum: f6a756fec5051ef2f9341e0543cde1da4e822982dd5398010baad92e2262bd177e08b753eb19b2fbee30f2fcb0e8756f24088fafc48293a364e9a8f8dc65a300
-  languageName: node
-  linkType: hard
-
-"sharp@npm:^0.33.1":
-  version: 0.33.1
-  resolution: "sharp@npm:0.33.1"
-  dependencies:
-    "@img/sharp-darwin-arm64": "npm:0.33.1"
-    "@img/sharp-darwin-x64": "npm:0.33.1"
-    "@img/sharp-libvips-darwin-arm64": "npm:1.0.0"
-    "@img/sharp-libvips-darwin-x64": "npm:1.0.0"
-    "@img/sharp-libvips-linux-arm": "npm:1.0.0"
-    "@img/sharp-libvips-linux-arm64": "npm:1.0.0"
-    "@img/sharp-libvips-linux-s390x": "npm:1.0.0"
-    "@img/sharp-libvips-linux-x64": "npm:1.0.0"
-    "@img/sharp-libvips-linuxmusl-arm64": "npm:1.0.0"
-    "@img/sharp-libvips-linuxmusl-x64": "npm:1.0.0"
-    "@img/sharp-linux-arm": "npm:0.33.1"
-    "@img/sharp-linux-arm64": "npm:0.33.1"
-    "@img/sharp-linux-s390x": "npm:0.33.1"
-    "@img/sharp-linux-x64": "npm:0.33.1"
-    "@img/sharp-linuxmusl-arm64": "npm:0.33.1"
-    "@img/sharp-linuxmusl-x64": "npm:0.33.1"
-    "@img/sharp-wasm32": "npm:0.33.1"
-    "@img/sharp-win32-ia32": "npm:0.33.1"
-    "@img/sharp-win32-x64": "npm:0.33.1"
-    color: "npm:^4.2.3"
-    detect-libc: "npm:^2.0.2"
-    semver: "npm:^7.5.4"
-  dependenciesMeta:
-    "@img/sharp-darwin-arm64":
-      optional: true
-    "@img/sharp-darwin-x64":
-      optional: true
-    "@img/sharp-libvips-darwin-arm64":
-      optional: true
-    "@img/sharp-libvips-darwin-x64":
-      optional: true
-    "@img/sharp-libvips-linux-arm":
-      optional: true
-    "@img/sharp-libvips-linux-arm64":
-      optional: true
-    "@img/sharp-libvips-linux-s390x":
-      optional: true
-    "@img/sharp-libvips-linux-x64":
-      optional: true
-    "@img/sharp-libvips-linuxmusl-arm64":
-      optional: true
-    "@img/sharp-libvips-linuxmusl-x64":
-      optional: true
-    "@img/sharp-linux-arm":
-      optional: true
-    "@img/sharp-linux-arm64":
-      optional: true
-    "@img/sharp-linux-s390x":
-      optional: true
-    "@img/sharp-linux-x64":
-      optional: true
-    "@img/sharp-linuxmusl-arm64":
-      optional: true
-    "@img/sharp-linuxmusl-x64":
-      optional: true
-    "@img/sharp-wasm32":
-      optional: true
-    "@img/sharp-win32-ia32":
-      optional: true
-    "@img/sharp-win32-x64":
-      optional: true
-  checksum: b5fee2a0e0d6861516c1439143e8dfcadf09d5c323c520dce2820fd8bea9e323764f781cfab58e3f41917ffe1bfcd91a50b7d07028977501154f4c9f5cbfb649
   languageName: node
   linkType: hard
 
@@ -5293,9 +5047,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "tailwindcss@npm:3.4.0"
+"tailwindcss@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "tailwindcss@npm:3.4.1"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
     arg: "npm:^5.0.2"
@@ -5322,7 +5076,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 0a1cef7468e6d17c2857d0b3c4017af2cb37ed8ba27dfb14780c517b8a74f6786970227c400ac1325fc8bcfc09099d8e990fa7c60924bf945f3d0a912d63f546
+  checksum: eec3d758f1cd4f51ab3b4c201927c3ecd18e55f8ac94256af60276aaf8d1df78f9dddb5e9fb1e057dfa7cea3c1356add4994cc3d42da9739df874e67047e656f
   languageName: node
   linkType: hard
 
@@ -5453,13 +5207,6 @@ __metadata:
   bin:
     tsconfck: bin/tsconfck.js
   checksum: 7b56c5bf8f683fafdf51cb7f00ed94e8cb87b9ea457a07d87868ac2c383a09f7277e14b4f479e88b4bfc621e3c12de13daff00a552d7296b3df735ff0ab7c8e1
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.4.0":
-  version: 2.6.2
-  resolution: "tslib@npm:2.6.2"
-  checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
   languageName: node
   linkType: hard
 
@@ -5818,81 +5565,81 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volar-service-css@npm:0.0.16":
-  version: 0.0.16
-  resolution: "volar-service-css@npm:0.0.16"
+"volar-service-css@npm:0.0.17":
+  version: 0.0.17
+  resolution: "volar-service-css@npm:0.0.17"
   dependencies:
     vscode-css-languageservice: "npm:^6.2.10"
     vscode-uri: "npm:^3.0.8"
   peerDependencies:
-    "@volar/language-service": ~1.10.0
+    "@volar/language-service": ~1.11.0
   peerDependenciesMeta:
     "@volar/language-service":
       optional: true
-  checksum: dd3862e89e5930264ae542b8665fdd2e8dc917a49df6070bf31c0b217f20e1714f76c306450f5ee7f2abc999d5990f9ce5252d4bf338e9728492b36606bce345
+  checksum: b724f8cb455e5945d327f75bcb1da24977da9ff428cb3f5c8fbf6c330accc4ceffe1ae9e5bc7b773c4c697d9fa0088b53160cc4e5cdb1861bce732d345cbd1e3
   languageName: node
   linkType: hard
 
-"volar-service-emmet@npm:0.0.16":
-  version: 0.0.16
-  resolution: "volar-service-emmet@npm:0.0.16"
+"volar-service-emmet@npm:0.0.17":
+  version: 0.0.17
+  resolution: "volar-service-emmet@npm:0.0.17"
   dependencies:
     "@vscode/emmet-helper": "npm:^2.9.2"
-    volar-service-html: "npm:0.0.16"
+    volar-service-html: "npm:0.0.17"
   peerDependencies:
-    "@volar/language-service": ~1.10.0
+    "@volar/language-service": ~1.11.0
   peerDependenciesMeta:
     "@volar/language-service":
       optional: true
-  checksum: d03d246229ce43287a822404aa067f4e67e00f4acb68bf95b4b5cf320bd34387541adffe27894f98f0ef0e6ab7c98b9a4abf2ad34c65ad83431e66c3cc2326ae
+  checksum: 93115b311c83418e16f1a443704b112829684fda2b53e5b43d3ba003ce32e1299d716af3f9a86c15490eb023a8d39ecdd847194123ea6ff286e6e8db6e71e775
   languageName: node
   linkType: hard
 
-"volar-service-html@npm:0.0.16":
-  version: 0.0.16
-  resolution: "volar-service-html@npm:0.0.16"
+"volar-service-html@npm:0.0.17":
+  version: 0.0.17
+  resolution: "volar-service-html@npm:0.0.17"
   dependencies:
     vscode-html-languageservice: "npm:^5.1.0"
     vscode-uri: "npm:^3.0.8"
   peerDependencies:
-    "@volar/language-service": ~1.10.0
+    "@volar/language-service": ~1.11.0
   peerDependenciesMeta:
     "@volar/language-service":
       optional: true
-  checksum: 64ea9637871f115f0960768cf8eafb21a8db114a515657a4bb89cd81af5276c1c77373dc4fc16cbc2925fc0ca3ca4ae638c53031aa903c61dbfcc14d6e295fd4
+  checksum: e2a711045ef5bb139110ed49685d08bcb586b7b989179b376d654b30c86ebbcdf33073192c22fa3571e1f6f429ded00117dbcb55e4a5d11ac50c1a1f606b7133
   languageName: node
   linkType: hard
 
-"volar-service-prettier@npm:0.0.16":
-  version: 0.0.16
-  resolution: "volar-service-prettier@npm:0.0.16"
+"volar-service-prettier@npm:0.0.17":
+  version: 0.0.17
+  resolution: "volar-service-prettier@npm:0.0.17"
   peerDependencies:
-    "@volar/language-service": ~1.10.0
+    "@volar/language-service": ~1.11.0
     prettier: ^2.2 || ^3.0
   peerDependenciesMeta:
     "@volar/language-service":
       optional: true
     prettier:
       optional: true
-  checksum: 952c592369e30409141589e9a8dff8af3ca8eb7e22284d3585950a248bb87db9ca1770f7378ca73a4061df0818aeb540217ff8df22ffdf72191c25cad6facffd
+  checksum: bccf8e09e88fbd580e6072e77ca0175480f8b2b97e8ccc619fcb3b8e061956cc7706498a52ad4dfb8eba42f7d0256360ebe907938d641609d747555c3b71db6c
   languageName: node
   linkType: hard
 
-"volar-service-typescript-twoslash-queries@npm:0.0.16":
-  version: 0.0.16
-  resolution: "volar-service-typescript-twoslash-queries@npm:0.0.16"
+"volar-service-typescript-twoslash-queries@npm:0.0.17":
+  version: 0.0.17
+  resolution: "volar-service-typescript-twoslash-queries@npm:0.0.17"
   peerDependencies:
-    "@volar/language-service": ~1.10.0
+    "@volar/language-service": ~1.11.0
   peerDependenciesMeta:
     "@volar/language-service":
       optional: true
-  checksum: d1bc56749735dac924ef072398ac3baf94858f1602df78a5636cd9837bd48b6a5fe5c607f0bab1721f7bff53d481601949525c367d6be5e6dac6e10de4a0f984
+  checksum: 0cf38844f4d79bc95e8e4b03e6130d75cd803884664196eba2cf25fde4beb80384af7b052c1af7bac23c99f27681fc0153477e1c2eece427845c27edfc2773b3
   languageName: node
   linkType: hard
 
-"volar-service-typescript@npm:0.0.16":
-  version: 0.0.16
-  resolution: "volar-service-typescript@npm:0.0.16"
+"volar-service-typescript@npm:0.0.17":
+  version: 0.0.17
+  resolution: "volar-service-typescript@npm:0.0.17"
   dependencies:
     path-browserify: "npm:^1.0.1"
     semver: "npm:^7.5.4"
@@ -5901,12 +5648,12 @@ __metadata:
     vscode-nls: "npm:^5.2.0"
     vscode-uri: "npm:^3.0.8"
   peerDependencies:
-    "@volar/language-service": ~1.10.0
-    "@volar/typescript": ~1.10.0
+    "@volar/language-service": ~1.11.0
+    "@volar/typescript": ~1.11.0
   peerDependenciesMeta:
     "@volar/language-service":
       optional: true
-  checksum: c47c70aa0065e5075103a56631a0e34255bc73dbab141feeee89d8e07e117707e53d050350594fa9ce117dd8d9a8b52bf84026c5fc2a602e34f79667fc891d17
+  checksum: ee3ab5eeb0d1e4f971371fca0ada33187b036c51dbc4ed3094ae181deffd764d29e0b3d6c349a91d1916b0ec227bfdb686790cb114591e40514aebb36d4610ca
   languageName: node
   linkType: hard
 
