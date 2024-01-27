@@ -1224,9 +1224,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.2.4":
-  version: 4.2.4
-  resolution: "astro@npm:4.2.4"
+"astro@npm:^4.2.6":
+  version: 4.2.6
+  resolution: "astro@npm:4.2.6"
   dependencies:
     "@astrojs/compiler": "npm:^2.5.0"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -1248,6 +1248,7 @@ __metadata:
     clsx: "npm:^2.0.0"
     common-ancestor-path: "npm:^1.0.1"
     cookie: "npm:^0.6.0"
+    cssesc: "npm:^3.0.0"
     debug: "npm:^4.3.4"
     deterministic-object-hash: "npm:^2.0.1"
     devalue: "npm:^4.3.2"
@@ -1297,7 +1298,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: c69749982dcdc9c34e9c42fa5c0dd132fdbb7e72a7662ade0451ec6ecacd230bb2e478e5f9a8d2e72e397eea71fea6fbf6bb92ef448c6064d371bf66d28029fc
+  checksum: d9fa39ca9b283271ae2005b47a8bdbf2faf111e19795223bc0f34e3eeae523d8c4652d088cdbf88a78bc2fd6bdf0e13eb4d3cec45d700e75663984561c062328
   languageName: node
   linkType: hard
 
@@ -2312,7 +2313,7 @@ __metadata:
     "@astrojs/sitemap": "npm:^3.0.5"
     "@astrojs/tailwind": "npm:^5.1.0"
     "@types/humanize-duration": "npm:^3.27.4"
-    astro: "npm:^4.2.4"
+    astro: "npm:^4.2.6"
     astro-favicons: "npm:^2.0.2"
     astro-google-fonts-optimizer: "npm:^0.2.2"
     astro-robots-txt: "npm:^1.0.0"
