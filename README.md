@@ -1,6 +1,6 @@
 # garpunkal.dev
 
-![Screenshot of website](/screens/screenshot.png)
+![Screenshot of website](/screens/screenshot1.png)
 
 This is my personal website that I use to learn new technologies.
 
