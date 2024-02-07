@@ -46,10 +46,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^2.5.0":
-  version: 2.5.1
-  resolution: "@astrojs/compiler@npm:2.5.1"
-  checksum: 10c0/8b5fe287538896a248dfcbea328a7922facc56be8466d30bedd6235e98092f6941ed63ea5d7a3a06f1ee11896a57feb75cd339d2b35d2d153f55a50bb0349b8f
+"@astrojs/compiler@npm:^2.5.3":
+  version: 2.5.3
+  resolution: "@astrojs/compiler@npm:2.5.3"
+  checksum: 10c0/b2cdbdc2e951297874bb335d5b07ab7ed92a239ac9dca60bd6b886da5b6a4dded3cadda04f2b6efde7475e9a7bb9fab164570ea1ffe0e62e0af48484133643b3
   languageName: node
   linkType: hard
 
@@ -1224,11 +1224,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "astro@npm:4.3.1"
+"astro@npm:^4.3.3":
+  version: 4.3.3
+  resolution: "astro@npm:4.3.3"
   dependencies:
-    "@astrojs/compiler": "npm:^2.5.0"
+    "@astrojs/compiler": "npm:^2.5.3"
     "@astrojs/internal-helpers": "npm:0.2.1"
     "@astrojs/markdown-remark": "npm:4.2.1"
     "@astrojs/telemetry": "npm:3.0.4"
@@ -1298,7 +1298,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/0c5d0af7b18cac25c2990f4614c78e27aae727b7c97b2eb916ce1b0ce01684cee43b9064061c1a3645dc95ba73416f8cee07e7bec79baf242d894d0a3680a894
+  checksum: 10c0/0990d2a2bac88c04449da1f321878bb68f0f9938d8ff33b158cfb30252e75c508fe537b97660a3cbdda39e941938a2ed40b4931bf9218f862ffcd80a26f24e8d
   languageName: node
   linkType: hard
 
@@ -2313,7 +2313,7 @@ __metadata:
     "@astrojs/sitemap": "npm:^3.0.5"
     "@astrojs/tailwind": "npm:^5.1.0"
     "@types/humanize-duration": "npm:^3.27.4"
-    astro: "npm:^4.3.1"
+    astro: "npm:^4.3.3"
     astro-favicons: "npm:^2.0.2"
     astro-google-fonts-optimizer: "npm:^0.2.2"
     astro-robots-txt: "npm:^1.0.0"
