@@ -25,11 +25,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.4",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/check": "^0.5.5",
+    "@astrojs/sitemap": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
     "@types/humanize-duration": "^3.27.4",
-    "astro": "^4.4.0",
+    "astro": "^4.4.3",
     "astro-favicons": "^2.0.2",
     "astro-google-fonts-optimizer": "^0.2.2",
     "astro-robots-txt": "^1.0.0",
