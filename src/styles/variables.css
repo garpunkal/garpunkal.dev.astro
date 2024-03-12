@@ -1,0 +1,7 @@
+@layer base {
+    :root {
+      --text-color: theme(colors.black);   
+      --gutter-size: 15px;     
+    }
+  }
+  

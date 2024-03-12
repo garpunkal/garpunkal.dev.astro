@@ -16,7 +16,10 @@ module.exports = {
 		...colorClasses,
 		'-mt-1'
 	],
-	theme: {		
+	theme: {	
+		container: {
+			center: true						
+		  },	
 		screens: {
 			sm: "375px",
 			md: "768px",
