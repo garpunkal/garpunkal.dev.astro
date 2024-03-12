@@ -1,4 +1,3 @@
-@import url("./variables.css");
 @tailwind base;
 @layer base {
 	:root {
@@ -37,7 +36,6 @@
 @tailwind components;
 @layer components {
 	
-
 	.wrapped-links {
 		@apply flex flex-row flex-wrap;	
 
