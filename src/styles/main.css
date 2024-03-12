@@ -12,11 +12,9 @@
 	h2 {
 		@apply text-mirage dark:text-pale;
 	}
-
 	h3 {
 		@apply text-vampire dark:text-pale;
 	}
-
 	a {
 		@apply text-cool dark:text-ocean hover:text-ocean;
 	}
@@ -35,9 +33,16 @@
 
 @tailwind components;
 @layer components {
-	
+	.container {
+		@apply px-[1rem] py-5 mx-auto;
+
+		@screen md {
+			@apply py-14;
+		}
+	}
+
 	.wrapped-links {
-		@apply flex flex-row flex-wrap;	
+		@apply flex flex-row flex-wrap;
 
 		> a {
 			@apply text-center flex-1 box-border basis-1/4;
@@ -48,14 +53,14 @@
 			> a {
 				@apply basis-1/3;
 			}
-		}	
+		}
 	}
 
 	.skip-to-main-content-link {
-		@apply absolute left-[-9999px] z-[999] p-1 bg-black text-white opacity-0;	
+		@apply absolute left-[-9999px] z-[999] p-1 bg-black text-white opacity-0;
 	}
 
 	.skip-to-main-content-link:focus {
-		@apply left-[50%] translate-x-[-50%] opacity-100;		
+		@apply left-[50%] translate-x-[-50%] opacity-100;
 	}
 }

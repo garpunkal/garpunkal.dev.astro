@@ -16,10 +16,7 @@ module.exports = {
 		...colorClasses,
 		'-mt-1'
 	],
-	theme: {	
-		container: {
-			center: true						
-		  },	
+	theme: {
 		screens: {
 			sm: "375px",
 			md: "768px",
@@ -47,7 +44,7 @@ module.exports = {
 			'56': "56px"
 		},
 		extend: {
-			colors: { 
+			colors: {
 				...colors
 			},
 			spacing: {
@@ -57,7 +54,7 @@ module.exports = {
 			width: (theme) => ({
 				"100pixel": "100px"
 			}),
-			height: (theme) => ({			
+			height: (theme) => ({
 				"144": "40rem",
 				"100pixel": "100px",
 				"screen/3": "75vh",
@@ -68,8 +65,8 @@ module.exports = {
 				"3xl-tulip": '10px 10px 50px -20px rgba(231, 166, 26, 1)',
 				"3xl-ocean": '10px 10px 50px -20px rgba(7, 125, 160, 1)',
 			}
-		}  
+		}
 	},
-	plugins: [], 
+	plugins: [],
 	darkMode: "class"
 }  
