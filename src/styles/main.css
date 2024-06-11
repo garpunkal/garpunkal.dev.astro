@@ -63,4 +63,12 @@
 	.skip-to-main-content-link:focus {
 		@apply left-[50%] translate-x-[-50%] opacity-100;
 	}
+
+	.pre-fade-in {
+		@apply opacity-0;
+	}
+
+	.fade-in {
+		@apply opacity-100 transition duration-1000;
+	}
 }

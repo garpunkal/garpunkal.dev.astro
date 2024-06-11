@@ -1,44 +1,45 @@
 {
-  "name": "garpunkal.dev.astro",
-  "type": "module",
-  "version": "1.0.0",
-  "homepage": "https://garpunkal.dev",
-  "description": "Personal website for Gareth Wright",
-  "keywords": [
-    "typescript",
-    "astro",
-    "tailwindcss",
-    "tailwind",
-    "squidex",
-    "vite"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/garpunkal/garpunkal.dev.astro"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev --host",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.5.7",
-    "@astrojs/sitemap": "^3.1.1",
-    "@astrojs/tailwind": "^5.1.0",
-    "@types/humanize-duration": "^3.27.4",
-    "astro": "^4.5.2",
-    "astro-favicons": "^2.0.2",
-    "astro-google-fonts-optimizer": "^0.2.2",
-    "astro-robots-txt": "^1.0.0",
-    "humanize-duration": "^3.31.0",
-    "postcss-nesting": "^12.1.0",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.4.2"
-  },
-  "devDependencies": {
-    "tailwindcss-animated": "^1.1.0"
-  }
+	"name": "garpunkal.dev.astro",
+	"type": "module",
+	"version": "1.0.0",
+	"homepage": "https://garpunkal.dev",
+	"description": "Personal website for Gareth Wright",
+	"keywords": [
+		"typescript",
+		"astro",
+		"tailwindcss",
+		"tailwind",
+		"squidex",
+		"vite"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/garpunkal/garpunkal.dev.astro"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev --host",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.5.7",
+		"@astrojs/sitemap": "^3.1.1",
+		"@astrojs/tailwind": "^5.1.0",
+		"@types/humanize-duration": "^3.27.4",
+		"astro": "^4.5.2",
+		"astro-favicons": "^2.0.2",
+		"astro-google-fonts-optimizer": "^0.2.2",
+		"astro-robots-txt": "^1.0.0",
+		"humanize-duration": "^3.31.0",
+		"postcss-nesting": "^12.1.0",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.4.2"
+	},
+	"devDependencies": {
+		"tailwindcss-animated": "^1.1.0",
+		"tailwindcss-intersect": "^1.0.5"
+	}
 }
