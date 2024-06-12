@@ -60,8 +60,10 @@ export function GetMonthYear(date:Date) {
 export function GetMonths(d1:Date, d2:Date) {
     if (d1 === null) d1 = new Date();
     else d1 = new Date(d1);
+
     if (d2 === null) d2 = new Date();
-    else d2 = new Date(d2);
+    else d2 = new Date(d2);   
+   
     return humanizeDuration(d2.valueOf() - d1.valueOf(), {
         conjunction: " and ",
         units: ["y", "mo"],

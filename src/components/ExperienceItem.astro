@@ -7,6 +7,10 @@ interface Props {
 }
 
 const { experience } = Astro.props;
+
+if (experience.to == null) {
+	experience.to = new Date();
+}
 ---
 
 <div
