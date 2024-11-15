@@ -67,6 +67,9 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [],
+	plugins: [
+		require('tailwindcss-animated'),
+		require('tailwindcss-intersect')
+	],
 	darkMode: "class"
 }  

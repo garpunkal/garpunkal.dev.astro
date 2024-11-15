@@ -18,4 +18,4 @@ SQUIDEX_KEY=YYYYYYYYY
 [MIT License](LICENSE.md)
     
 ## Support
-Contact me on X: https://x.com/garpunkal, or Mastodon: https://mastodon.me.uk/@garpunkal
+Contact me on X: https://x.com/garpunkal

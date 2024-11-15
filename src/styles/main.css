@@ -36,9 +36,7 @@
 	.container {
 		@apply px-[1rem] py-5 mx-auto;
 
-		@screen md {
-			@apply py-14;
-		}
+		@apply md:py-14;
 	}
 
 	.wrapped-links {
@@ -48,13 +46,11 @@
 			@apply text-center flex-1 box-border basis-1/4;
 		}
 
-		@screen md {
-			@apply flex-nowrap;
-			> a {
-				@apply basis-1/3;
-			}
+		@apply md:flex-nowrap;
+		> a {
+			@apply md:basis-1/3;
 		}
-	}
+	}  
 
 	.skip-to-main-content-link {
 		@apply absolute left-[-9999px] z-[999] p-1 bg-black text-white opacity-0;
@@ -62,5 +58,13 @@
 
 	.skip-to-main-content-link:focus {
 		@apply left-[50%] translate-x-[-50%] opacity-100;
+	}
+
+	.pre-fade-in {
+		@apply opacity-0;
+	}
+
+	.fade-in {
+		@apply opacity-100 transition duration-1000;
 	}
 }

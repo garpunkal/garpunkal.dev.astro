@@ -7,6 +7,10 @@ interface Props {
 }
 
 const { experience } = Astro.props;
+
+if (experience.to == null) {
+	experience.to = new Date();
+}
 ---
 
 <div
@@ -68,7 +72,7 @@ const { experience } = Astro.props;
 		</div>
 
 		{
-			GetMonths(experience.from, experience.to) != "0 months" ? (
+			!experience.isCurrent && GetMonths(experience.from, experience.to) != "0 months" ? (
 				<div class="text-xs">{GetMonths(experience.from, experience.to)}</div>
 			) : (
 				<div />
